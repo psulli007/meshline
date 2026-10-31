@@ -21,6 +21,7 @@ struct AppInfoView: View {
 
     @State private var showTopology = false
     @State private var showShareApp = false
+    @State private var showLoRaRadio = false
     @State private var liveVoiceEnabled = PTTSettings.liveVoiceEnabled
     @State private var locationNotesEnabled = LocationNotesSettings.enabled
     @State private var hideMessagePreviews = NotificationPrivacySettings.hideMessagePreviews
@@ -284,6 +285,9 @@ struct AppInfoView: View {
         .sheet(isPresented: $showShareApp) {
             ShareMeshlineView()
         }
+        .sheet(isPresented: $showLoRaRadio) {
+            LoRaRadioView()
+        }
         #else
         NavigationView {
             VStack(spacing: 0) {
@@ -309,6 +313,9 @@ struct AppInfoView: View {
         }
         .sheet(isPresented: $showShareApp) {
             ShareMeshlineView()
+        }
+        .sheet(isPresented: $showLoRaRadio) {
+            LoRaRadioView()
         }
         #endif
     }
@@ -445,6 +452,27 @@ struct AppInfoView: View {
                             set: { networkActivation.setInternetEnabled($0) }
                         )
                     )
+                }
+
+                settingsCard {
+                    Button {
+                        showLoRaRadio = true
+                    } label: {
+                        HStack(spacing: 8) {
+                            Image(systemName: "antenna.radiowaves.left.and.right")
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(verbatim: "LoRa radio (optional)")
+                                    .bitchatFont(size: 12, weight: .semibold)
+                                Text(verbatim: "Pair a Meshtastic radio for long range messaging.")
+                                    .bitchatFont(size: 11)
+                                    .foregroundColor(secondaryTextColor)
+                            }
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                        }
+                        .foregroundColor(textColor)
+                    }
+                    .buttonStyle(.plain)
                 }
 
                 settingsCard {

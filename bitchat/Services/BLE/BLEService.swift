@@ -376,7 +376,14 @@ final class BLEService: NSObject {
     private let messageQueue = DispatchQueue(label: "mesh.message")
     /// Meshline v1.1: Wi-Fi (MultipeerConnectivity) link alongside BLE.
     /// Created on first `startServices()`; carries the same packet frames.
-    private var wifiLink: MultipeerLinkService?
+    /// Read from BLE and message queues and written from the caller of
+    /// `startServices()`, so access goes through `auxLinkLock`.
+    private var wifiLink: MultipeerLinkService? {
+        auxLinkLock.lock(); defer { auxLinkLock.unlock() }
+        return _wifiLink
+    }
+    private let auxLinkLock = NSLock()
+    private var _wifiLink: MultipeerLinkService?
     private let messageQueueKey = DispatchSpecificKey<Void>()
     /// The only source of deferred engine work (see BLEEngineScheduling);
     /// injectable so tests drive protocol deadlines with a manual clock.
@@ -979,6 +986,7 @@ final class BLEService: NSObject {
     
     func stopServices() {
         wifiLink?.stop()
+        MeshtasticRadioService.shared.stop()
         let localIdentity = localIdentityState.snapshot()
         // Send leave message synchronously to ensure delivery
         var leavePacket = BitchatPacket(
@@ -1048,6 +1056,8 @@ final class BLEService: NSObject {
     /// the identity/session cleanup follows synchronously.
     private func stopServicesImmediatelyForPanic() {
         wifiLink?.stop()
+        // Panic also forgets the paired radio.
+        MeshtasticRadioService.shared.unpair()
         bleQueue.sync {
             pendingNotifications.removeAll()
         }
@@ -2279,6 +2289,11 @@ final class BLEService: NSObject {
         // Noise-authenticated BLE link keep their strict semantics.
         let strictLink = requireDirectPeerLink || requireNoiseAuthenticatedPeerLink
         let sentOverWiFi = strictLink ? false : (wifiLink?.send(data) ?? false)
+        // LoRa takes only airtime-worthy types, rate limited, and never
+        // echoes a packet that arrived over LoRa (the radio mesh floods it).
+        let sentOverLoRa = strictLink || TestEnvironment.isRunningTests
+            ? false
+            : MeshtasticRadioService.shared.sendIfAdmitted(packet)
         let sentOverBLE = sendOnBLELinks(
             packet: packet,
             data: data,
@@ -2287,7 +2302,7 @@ final class BLEService: NSObject {
             requireDirectPeerLink: requireDirectPeerLink,
             requireNoiseAuthenticatedPeerLink: requireNoiseAuthenticatedPeerLink
         )
-        return sentOverBLE || sentOverWiFi
+        return sentOverBLE || sentOverWiFi || sentOverLoRa
     }
 
     // MARK: - Wi-Fi link (Meshline v1.1)
@@ -2295,21 +2310,33 @@ final class BLEService: NSObject {
     private func startWiFiLinkIfNeeded() {
         // Unit tests drive BLEService with mocks; keep real radios out.
         guard !TestEnvironment.isRunningTests else { return }
-        if wifiLink == nil {
-            let link = MultipeerLinkService()
+        auxLinkLock.lock()
+        let link: MultipeerLinkService
+        if let existing = _wifiLink {
+            link = existing
+        } else {
+            link = MultipeerLinkService()
             link.onPacket = { [weak self] packet in
-                self?.ingestWiFiPacket(packet)
+                self?.ingestLinkPacket(packet)
             }
-            wifiLink = link
+            _wifiLink = link
         }
-        wifiLink?.start()
+        auxLinkLock.unlock()
+        link.start()
+
+        // Meshline v2: optional Meshtastic LoRa radio, only if one is paired.
+        let radio = MeshtasticRadioService.shared
+        radio.onPacket = { [weak self] packet in
+            self?.ingestLinkPacket(packet)
+        }
+        radio.resumeSavedRadioIfNeeded()
     }
 
-    /// Feeds a Wi-Fi frame into the same pipeline as BLE frames: dedupe,
+    /// Feeds a Wi-Fi or LoRa frame into the same pipeline as BLE frames: dedupe,
     /// handlers, Noise decryption and TTL relay (which re-sends on both
     /// radios). The claimed sender is unauthenticated here exactly as for a
     /// relayed BLE frame; signatures and Noise sessions authenticate later.
-    private func ingestWiFiPacket(_ packet: BitchatPacket) {
+    private func ingestLinkPacket(_ packet: BitchatPacket) {
         guard let lifecycleGeneration = capturePanicLifecycleGeneration() else { return }
         messageQueue.async { [weak self] in
             guard let self,
