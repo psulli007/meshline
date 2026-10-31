@@ -718,7 +718,7 @@ struct BridgeCourierServiceTests {
         let myKey = try #require(fixture.myKey)
         let expected = Set(CourierEnvelope.candidateTags(noiseStaticKey: myKey, around: Date()).map { $0.hexEncodedString() })
         #expect(Set(tags) == expected)
-        #expect(tags.count == 3) // adjacent UTC days
+        #expect(tags.count == 5) // three days back through tomorrow
     }
 
     @Test func refreshAlsoWatchesLocalVerifiedPeers() throws {

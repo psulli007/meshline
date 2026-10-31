@@ -205,10 +205,78 @@ struct RelayControllerTests {
             isHandshake: false,
             isAnnounce: false,
             degree: TransportConfig.bleHighDegreeThreshold,
-            highDegreeThreshold: TransportConfig.bleHighDegreeThreshold
+            highDegreeThreshold: TransportConfig.bleHighDegreeThreshold,
+            relayRoll: 0
         )
 
         #expect(decision.shouldRelay)
         #expect(decision.newTTL == 4)
+    }
+
+    @Test
+    func denseGraph_skipsRelayWhenRollAboveProbability() async {
+        let decision = RelayController.decide(
+            ttl: 10,
+            senderIsSelf: false,
+            isEncrypted: false,
+            isDirectedEncrypted: false,
+            isFragment: false,
+            isDirectedFragment: false,
+            isHandshake: false,
+            isAnnounce: false,
+            degree: TransportConfig.bleHighDegreeThreshold,
+            highDegreeThreshold: TransportConfig.bleHighDegreeThreshold,
+            relayRoll: 0.99
+        )
+
+        #expect(!decision.shouldRelay)
+    }
+
+    @Test
+    func denseGraph_announceAlwaysRelays() async {
+        let decision = RelayController.decide(
+            ttl: 10,
+            senderIsSelf: false,
+            isEncrypted: false,
+            isDirectedEncrypted: false,
+            isFragment: false,
+            isDirectedFragment: false,
+            isHandshake: false,
+            isAnnounce: true,
+            degree: TransportConfig.bleHighDegreeThreshold * 3,
+            highDegreeThreshold: TransportConfig.bleHighDegreeThreshold,
+            relayRoll: 0.99
+        )
+
+        #expect(decision.shouldRelay)
+    }
+
+    @Test
+    func sparseChain_neverSkipsOnRoll() async {
+        let decision = RelayController.decide(
+            ttl: 10,
+            senderIsSelf: false,
+            isEncrypted: false,
+            isDirectedEncrypted: false,
+            isFragment: false,
+            isDirectedFragment: false,
+            isHandshake: false,
+            isAnnounce: false,
+            degree: 2,
+            highDegreeThreshold: TransportConfig.bleHighDegreeThreshold,
+            relayRoll: 0.99
+        )
+
+        #expect(decision.shouldRelay)
+        #expect(decision.newTTL == 7) // sparse cap 8, minus one hop
+    }
+
+    @Test
+    func denseRelayProbability_tiers() async {
+        let t = TransportConfig.bleHighDegreeThreshold
+        #expect(RelayController.denseRelayProbability(degree: t - 1, highDegreeThreshold: t, isAnnounce: false, isUrgentBoardPost: false) == 1.0)
+        #expect(RelayController.denseRelayProbability(degree: t, highDegreeThreshold: t, isAnnounce: false, isUrgentBoardPost: false) == TransportConfig.bleDenseRelayProbability)
+        #expect(RelayController.denseRelayProbability(degree: t * 2, highDegreeThreshold: t, isAnnounce: false, isUrgentBoardPost: false) == TransportConfig.bleVeryDenseRelayProbability)
+        #expect(RelayController.denseRelayProbability(degree: t * 2, highDegreeThreshold: t, isAnnounce: false, isUrgentBoardPost: true) == 1.0)
     }
 }

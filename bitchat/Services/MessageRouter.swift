@@ -127,7 +127,7 @@ final class MessageRouter {
 
     // Outbox limits to prevent unbounded memory growth
     private static let maxMessagesPerPeer = 100
-    private static let messageTTLSeconds: TimeInterval = 24 * 60 * 60 // 24 hours
+    private static let messageTTLSeconds: TimeInterval = 72 * 60 * 60 // Meshline: 72 hours, matches courier lifetime
     // Bound actual sends that never receive an ack, whether they used weak
     // reachability or an apparently secure session that keeps being replaced.
     // Connected pre-handshake sends are transport-owned and do not burn this

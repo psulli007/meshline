@@ -20,6 +20,7 @@ struct AppInfoView: View {
     var onPanicWipe: (@MainActor () -> Void)?
 
     @State private var showTopology = false
+    @State private var showShareApp = false
     @State private var liveVoiceEnabled = PTTSettings.liveVoiceEnabled
     @State private var locationNotesEnabled = LocationNotesSettings.enabled
     @State private var hideMessagePreviews = NotificationPrivacySettings.hideMessagePreviews
@@ -280,6 +281,9 @@ struct AppInfoView: View {
                 MeshTopologyView(provider: topologyProvider)
             }
         }
+        .sheet(isPresented: $showShareApp) {
+            ShareMeshlineView()
+        }
         #else
         NavigationView {
             VStack(spacing: 0) {
@@ -302,6 +306,9 @@ struct AppInfoView: View {
             if let topologyProvider {
                 MeshTopologyView(provider: topologyProvider)
             }
+        }
+        .sheet(isPresented: $showShareApp) {
+            ShareMeshlineView()
         }
         #endif
     }
@@ -834,6 +841,17 @@ struct AppInfoView: View {
             // Credit
             VStack(alignment: .leading, spacing: 8) {
                 SectionHeader(verbatim: "ABOUT MESHLINE")
+                Button {
+                    showShareApp = true
+                } label: {
+                    HStack(spacing: 8) {
+                        Image(systemName: "qrcode")
+                        Text(verbatim: "Share Meshline with people nearby")
+                            .bitchatFont(size: 12, weight: .semibold)
+                    }
+                    .foregroundColor(textColor)
+                }
+                .buttonStyle(.plain)
                 Text(verbatim: "Meshline is based on bitchat by permissionlesstech (github.com/permissionlesstech/bitchat), released into the public domain under the Unlicense. Thank you to the bitchat contributors.")
                     .bitchatFont(size: 12)
                     .foregroundColor(textColor)

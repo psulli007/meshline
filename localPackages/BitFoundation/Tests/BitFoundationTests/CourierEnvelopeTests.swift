@@ -137,7 +137,8 @@ struct CourierEnvelopeTests {
         let date = Date(timeIntervalSince1970: 1_750_000_000)
         let day = CourierEnvelope.epochDay(for: date)
         let candidates = CourierEnvelope.candidateTags(noiseStaticKey: key, around: date)
-        #expect(candidates.count == 3)
+        #expect(candidates.count == 5)
+        #expect(candidates.contains(CourierEnvelope.recipientTag(noiseStaticKey: key, epochDay: day - 3)))
         #expect(candidates.contains(CourierEnvelope.recipientTag(noiseStaticKey: key, epochDay: day - 1)))
         #expect(candidates.contains(CourierEnvelope.recipientTag(noiseStaticKey: key, epochDay: day)))
         #expect(candidates.contains(CourierEnvelope.recipientTag(noiseStaticKey: key, epochDay: day + 1)))
@@ -148,6 +149,15 @@ struct CourierEnvelopeTests {
         let key = Data(repeating: 0x44, count: 32)
         let sealedAt = Date(timeIntervalSince1970: 1_750_000_000)
         let deliveredAt = sealedAt.addingTimeInterval(20 * 60 * 60)
+        let tag = CourierEnvelope.recipientTag(noiseStaticKey: key, epochDay: CourierEnvelope.epochDay(for: sealedAt))
+        #expect(CourierEnvelope.candidateTags(noiseStaticKey: key, around: deliveredAt).contains(tag))
+    }
+
+    @Test func sealedThreeDaysAgoStillMatches() {
+        // Meshline holds envelopes 72h, so day D must match on day D+3.
+        let key = Data(repeating: 0x55, count: 32)
+        let sealedAt = Date(timeIntervalSince1970: 1_750_000_000)
+        let deliveredAt = sealedAt.addingTimeInterval(CourierEnvelope.maxLifetimeSeconds)
         let tag = CourierEnvelope.recipientTag(noiseStaticKey: key, epochDay: CourierEnvelope.epochDay(for: sealedAt))
         #expect(CourierEnvelope.candidateTags(noiseStaticKey: key, around: deliveredAt).contains(tag))
     }

@@ -22,7 +22,8 @@ struct RelayController {
                        isUrgentBoardPost: Bool = false,
                        isVoiceFrame: Bool = false,
                        degree: Int,
-                       highDegreeThreshold: Int) -> RelayDecision {
+                       highDegreeThreshold: Int,
+                       relayRoll: Double = Double.random(in: 0..<1)) -> RelayDecision {
         let ttlCap = min(ttl, TransportConfig.messageTTLDefault)
 
         // REQUEST_SYNC is link-local: never relay it, even when a peer crafts
@@ -85,6 +86,20 @@ struct RelayController {
         }()
         let newTTL = ttlLimit &- 1
 
+        // Meshline: probabilistic rebroadcast in dense graphs. With many
+        // neighbors, most of them already hear the original, so each node
+        // relays plain broadcasts only with probability p. Announces and
+        // urgent board posts always relay. Dedup still drops repeats.
+        let relayProbability = Self.denseRelayProbability(
+            degree: degree,
+            highDegreeThreshold: highDegreeThreshold,
+            isAnnounce: isAnnounce,
+            isUrgentBoardPost: isUrgentBoardPost
+        )
+        if relayRoll >= relayProbability {
+            return RelayDecision(shouldRelay: false, newTTL: ttlLimit, delayMs: 0)
+        }
+
         // Wider jitter window to allow duplicate suppression to win more often
         // For sparse graphs (<=2), relay quickly to avoid cancellation races
         let delayMs: Int
@@ -95,5 +110,18 @@ struct RelayController {
         default:    delayMs = Int.random(in: 100...220)
         }
         return RelayDecision(shouldRelay: true, newTTL: newTTL, delayMs: delayMs)
+    }
+
+    /// Chance that a plain broadcast is rebroadcast at the given degree.
+    /// 1.0 below the dense threshold, 0.7 when dense, 0.5 when very dense
+    /// (twice the threshold or more).
+    static func denseRelayProbability(degree: Int,
+                                      highDegreeThreshold: Int,
+                                      isAnnounce: Bool,
+                                      isUrgentBoardPost: Bool) -> Double {
+        if isAnnounce || isUrgentBoardPost { return 1.0 }
+        if degree >= highDegreeThreshold * 2 { return TransportConfig.bleVeryDenseRelayProbability }
+        if degree >= highDegreeThreshold { return TransportConfig.bleDenseRelayProbability }
+        return 1.0
     }
 }

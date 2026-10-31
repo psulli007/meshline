@@ -271,9 +271,21 @@ final class NetworkActivationService: ObservableObject {
 
     @Published private(set) var internetEnabled: Bool = NetworkActivationService.internetOptedIn()
 
+    /// Set once the gateway defaults have been applied, so a user who later
+    /// turns gateway or bridge off is never overridden.
+    nonisolated static let gatewayDefaultsAppliedKey = "meshline.gatewayDefaultsApplied"
+
     func setInternetEnabled(_ enabled: Bool) {
         storage.set(enabled, forKey: Self.internetOptInKey)
         internetEnabled = enabled
+        if enabled && !storage.bool(forKey: Self.gatewayDefaultsAppliedKey) {
+            // Meshline default: with internet on, act as a gateway for the
+            // mesh. Bridge + gateway together park and fetch sealed (end to
+            // end encrypted) courier drops for nearby peers on Nostr relays.
+            storage.set(true, forKey: Self.gatewayDefaultsAppliedKey)
+            GatewayService.shared.setEnabled(true)
+            BridgeService.shared.setEnabled(true)
+        }
         reevaluate()
     }
 

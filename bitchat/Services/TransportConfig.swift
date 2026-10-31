@@ -8,6 +8,9 @@ enum TransportConfig {
     static let messageTTLDefault: UInt8 = 10                // Default TTL for mesh flooding
     static let bleMaxInFlightAssemblies: Int = 128          // Cap concurrent fragment assemblies
     static let bleHighDegreeThreshold: Int = 6              // For adaptive TTL/probabilistic relays
+    // Meshline: rebroadcast probability for plain broadcasts in dense graphs
+    static let bleDenseRelayProbability: Double = 0.7
+    static let bleVeryDenseRelayProbability: Double = 0.5
     static let bleMaxConcurrentTransfers: Int = 2           // Limit simultaneous large media sends
     // Clock skew tolerated on received packet timestamps. Live packets must
     // sit within ± this of local time; sync replies may be arbitrarily old

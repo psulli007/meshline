@@ -44,6 +44,8 @@ public struct CourierEnvelope: Equatable {
     /// Cap on the copy budget a depositor can claim, so a malicious envelope
     /// cannot turn the courier network into an amplifier.
     public static let maxCopies: UInt8 = 8
+    /// Past UTC days whose tags still match (covers the 72h lifetime).
+    public static let candidateDaysBack: UInt32 = 3
 
     private enum TLVType: UInt8 {
         case recipientTag = 0x01
@@ -186,8 +188,11 @@ public struct CourierEnvelope: Equatable {
     /// Covers the adjacent days so envelopes sealed near midnight (or across
     /// modest clock skew) still match while being carried.
     public static func candidateTags(noiseStaticKey: Data, around date: Date) -> [Data] {
+        // Meshline: envelopes live up to 72h, so an envelope sealed on day D
+        // must still match on day D+3. Cover three days back plus tomorrow.
         let day = epochDay(for: date)
-        return [day == 0 ? 0 : day - 1, day, day + 1].map {
+        let first = day >= candidateDaysBack ? day - candidateDaysBack : 0
+        return (first...(day + 1)).map {
             recipientTag(noiseStaticKey: noiseStaticKey, epochDay: $0)
         }
     }
