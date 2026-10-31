@@ -30,7 +30,11 @@ struct BitchatApp: App {
 
     var body: some Scene {
         WindowGroup {
+            #if os(iOS)
+            MeshlineHomeView()
+            #else
             ContentView()
+            #endif
                 .environment(\.appTheme, AppTheme(rawValue: appThemeRawValue) ?? .matrix)
                 .environmentObject(runtime.publicChatModel)
                 .environmentObject(runtime.privateInboxModel)

@@ -1567,6 +1567,8 @@ final class ChatViewModel: ObservableObject, BitchatDelegate, SynchronousMessage
         // state. These services cancel their subscriptions and delayed tasks,
         // so old callbacks cannot reconnect during the transaction.
         panicNetworkLifecycle.stop()
+        // Meshline: on-device names for people are personal data too.
+        ContactLabelStore.shared.removeAll()
 
         // Establish both independent durable intents before erasing anything.
         // `wipeMedia` will still attempt deletion if neither write succeeds.
