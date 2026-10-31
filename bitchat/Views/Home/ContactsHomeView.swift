@@ -371,6 +371,21 @@ struct ContactsHomeView: View {
                     Text(verbatim: "Save to my people")
                 }
             }
+            Button {
+                let name = displayName(for: row)
+                let body = "I want to report \(name) on Meshline (peer \(row.peerID.id)) for abusive or objectionable content."
+                var c = URLComponents(string: "mailto:peter@hellofaro.io")
+                c?.queryItems = [URLQueryItem(name: "subject", value: "Meshline report"), URLQueryItem(name: "body", value: body)]
+                conversationUIModel.block(peerID: row.peerID, displayName: name)
+                if let url = c?.url { openURL(url) }
+            } label: {
+                Text(verbatim: "Report and block")
+            }
+            Button(role: .destructive) {
+                conversationUIModel.block(peerID: row.peerID, displayName: displayName(for: row))
+            } label: {
+                Text(verbatim: "Block")
+            }
         }
     }
 }
