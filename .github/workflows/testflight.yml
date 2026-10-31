@@ -44,7 +44,7 @@ jobs:
       - name: Archive (automatic signing, cloud managed)
         run: |
           set -o pipefail
-          xcodebuild archive -project bitchat.xcodeproj -scheme bitchat_iOS -configuration Release \
+          xcodebuild archive -project bitchat.xcodeproj -scheme "bitchat (iOS)" -configuration Release \
             -destination 'generic/platform=iOS' -archivePath "$RUNNER_TEMP/Meshline.xcarchive" \
             -derivedDataPath "$RUNNER_TEMP/dd" -skipPackagePluginValidation -skipMacroValidation \
             -allowProvisioningUpdates \
