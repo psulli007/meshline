@@ -10,6 +10,7 @@ struct AppInfoView: View {
     @AppStorage(AppTheme.storageKey) private var appThemeRawValue = AppTheme.matrix.rawValue
     @EnvironmentObject private var locationChannelsModel: LocationChannelsModel
     @ObservedObject private var bridgeService = BridgeService.shared
+    @ObservedObject private var networkActivation = NetworkActivationService.shared
 
     /// Supplies the mesh topology map data. Nil (previews, missing wiring)
     /// hides the topology row entirely.
@@ -426,6 +427,19 @@ struct AppInfoView: View {
             VStack(alignment: .leading, spacing: 12) {
                 SectionHeader(verbatim: Strings.Settings.connectivityTitle)
 
+                // Meshline: internet features are opt-in; the Bluetooth mesh
+                // works with no internet or cell service.
+                settingsCard {
+                    settingToggle(
+                        title: Text(verbatim: "Internet features"),
+                        subtitle: Text(verbatim: "Off by default. Meshline works over Bluetooth with no internet or cell service. Turn on to also use internet relays and Tor when a connection exists."),
+                        isOn: Binding(
+                            get: { networkActivation.internetEnabled },
+                            set: { networkActivation.setInternetEnabled($0) }
+                        )
+                    )
+                }
+
                 settingsCard {
                     settingToggle(
                         title: Text(Strings.Settings.bridgeTitle),
@@ -815,6 +829,15 @@ struct AppInfoView: View {
                 FeatureRow(info: Strings.Privacy.ephemeral)
 
                 FeatureRow(info: Strings.Privacy.panic)
+            }
+
+            // Credit
+            VStack(alignment: .leading, spacing: 8) {
+                SectionHeader(verbatim: "ABOUT MESHLINE")
+                Text(verbatim: "Meshline is based on bitchat by permissionlesstech (github.com/permissionlesstech/bitchat), released into the public domain under the Unlicense. Thank you to the bitchat contributors.")
+                    .bitchatFont(size: 12)
+                    .foregroundColor(textColor)
+                    .fixedSize(horizontal: false, vertical: true)
             }
 
             // Symbols legend

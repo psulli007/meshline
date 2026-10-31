@@ -1,0 +1,82 @@
+# Meshline: signed archive + TestFlight upload on a GitHub-hosted Mac.
+# Manual only: gh workflow run testflight.yml -R psulli007/meshline -f build_number=1
+#
+# Signing is Xcode automatic + cloud signing through the App Store Connect API key
+# (-allowProvisioningUpdates with -authenticationKey*). Apple-managed cloud certificates
+# do not use one of the team's 3 distribution certificate slots, and nothing is revoked.
+# Secrets (this repo only): ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8. Key must be Admin.
+# Never submits for App Review.
+name: TestFlight
+on:
+  workflow_dispatch:
+    inputs:
+      build_number:
+        description: "Build number (CFBundleVersion), higher than the last upload"
+        required: true
+      upload:
+        type: boolean
+        default: true
+concurrency:
+  group: testflight
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  ship:
+    runs-on: macos-26
+    timeout-minutes: 90
+    env:
+      BUILD_NUMBER: ${{ inputs.build_number }}
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: xcodebuild -version
+      - name: API key
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          [[ "$BUILD_NUMBER" =~ ^[0-9]+$ ]] || { echo "build_number must be an integer"; exit 1; }
+          mkdir -p ~/.appstoreconnect/private_keys
+          KEY="$HOME/.appstoreconnect/private_keys/AuthKey_${ASC_KEY_ID}.p8"
+          printf '%s' "$ASC_KEY_P8" > "$KEY"; chmod 600 "$KEY"
+          echo "ASC_KEY_PATH=$KEY" >> "$GITHUB_ENV"
+      - name: Archive (automatic signing, cloud managed)
+        run: |
+          set -o pipefail
+          xcodebuild archive -project bitchat.xcodeproj -scheme bitchat_iOS -configuration Release \
+            -destination 'generic/platform=iOS' -archivePath "$RUNNER_TEMP/Meshline.xcarchive" \
+            -derivedDataPath "$RUNNER_TEMP/dd" -skipPackagePluginValidation -skipMacroValidation \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$ASC_KEY_PATH" -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
+            DEVELOPMENT_TEAM=VB3RRU9AB4 CODE_SIGN_STYLE=Automatic CURRENT_PROJECT_VERSION="$BUILD_NUMBER" \
+            | tee "$RUNNER_TEMP/archive.log" | grep -E "error:|ARCHIVE (SUCCEEDED|FAILED)" || true
+          grep -q "ARCHIVE SUCCEEDED" "$RUNNER_TEMP/archive.log"
+      - name: Archive log on failure
+        if: failure()
+        run: grep -nE "error:|Command .* failed" "$RUNNER_TEMP/archive.log" | head -80; tail -120 "$RUNNER_TEMP/archive.log"
+      - name: Export and upload
+        run: |
+          DEST=$([ "${{ inputs.upload }}" = "true" ] && echo upload || echo export)
+          cat > "$RUNNER_TEMP/ExportOptions.plist" <<PLIST
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0"><dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>teamID</key><string>VB3RRU9AB4</string>
+            <key>signingStyle</key><string>automatic</string>
+            <key>destination</key><string>$DEST</string>
+            <key>manageAppVersionAndBuildNumber</key><false/>
+            <key>uploadSymbols</key><true/>
+          </dict></plist>
+          PLIST
+          xcodebuild -exportArchive -archivePath "$RUNNER_TEMP/Meshline.xcarchive" \
+            -exportPath "$RUNNER_TEMP/export" -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$ASC_KEY_PATH" -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID"
+          ls -la "$RUNNER_TEMP/export" || true
+      - name: Clean up key
+        if: always()
+        run: rm -rf ~/.appstoreconnect/private_keys

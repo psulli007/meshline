@@ -121,7 +121,7 @@ final class NetworkActivationService: ObservableObject {
     nonisolated static func persistedTorPreference(
         in defaults: UserDefaults = .standard
     ) -> Bool {
-        defaults.object(forKey: torPreferenceKey) as? Bool ?? true
+        defaults.object(forKey: torPreferenceKey) as? Bool ?? true // Tor only runs once internet is opted in
     }
 
     func start() {
@@ -261,8 +261,24 @@ final class NetworkActivationService: ObservableObject {
 
     /// Effective gate: base policy AND a usable network path. When there is
     /// provably no network, Tor bootstrap and relay reconnects are suppressed.
+    /// Meshline: offline-first. Internet features (Nostr relays, Tor) stay off
+    /// until the user opts in from Settings > Connectivity.
+    nonisolated static let internetOptInKey = "meshline.internetEnabled"
+
+    nonisolated static func internetOptedIn(in defaults: UserDefaults = .standard) -> Bool {
+        defaults.bool(forKey: internetOptInKey)
+    }
+
+    @Published private(set) var internetEnabled: Bool = NetworkActivationService.internetOptedIn()
+
+    func setInternetEnabled(_ enabled: Bool) {
+        storage.set(enabled, forKey: Self.internetOptInKey)
+        internetEnabled = enabled
+        reevaluate()
+    }
+
     private func effectiveAllowed() -> Bool {
-        basePolicyAllowed() && reachabilityMonitor.isReachable
+        Self.internetOptedIn(in: storage) && basePolicyAllowed() && reachabilityMonitor.isReachable
     }
 
     private func applyTorState(torDesired: Bool) {
