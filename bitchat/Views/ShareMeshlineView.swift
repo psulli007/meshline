@@ -13,7 +13,7 @@ import SwiftUI
 /// Where people get Meshline. Placeholder until the TestFlight public link
 /// or App Store URL exists; swap this one constant.
 enum MeshlineShareLink {
-    static let url = URL(string: "https://testflight.apple.com/join/MESHLINE")!
+    static let url = URL(string: "https://testflight.apple.com/join/PC6vqs3k")!
 }
 
 /// Offline app sharing: a QR code anyone nearby can scan, plus the system
