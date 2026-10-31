@@ -43,6 +43,13 @@
 	<string>Meshline uses Bluetooth to find other Meshline users nearby.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Meshline uses the camera to scan QR codes to verify peers.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Meshline uses your local Wi-Fi to connect directly to nearby phones for faster, longer range messaging, even with no internet.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_meshline-mesh._tcp</string>
+		<string>_meshline-mesh._udp</string>
+	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Meshline uses your location to compute optional geohash channels, bridge cells, and nearby place labels. Exact coordinates are not included in Meshline messages.</string>
 	<key>NSMicrophoneUsageDescription</key>

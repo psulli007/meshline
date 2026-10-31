@@ -359,8 +359,8 @@ struct MessageRouterTests {
         router.sendPrivate("Hello", to: peerID, recipientNickname: "Peer", messageID: "m10")
         #expect(transport.sentPrivateMessages.isEmpty)
 
-        // Past the 24h TTL the flush must drop it (visibly), not send it.
-        clock.now = clock.now.addingTimeInterval(24 * 60 * 60 + 1)
+        // Past the 72h TTL the flush must drop it (visibly), not send it.
+        clock.now = clock.now.addingTimeInterval(72 * 60 * 60 + 1)
         transport.reachablePeers.insert(peerID)
         router.flushOutbox(for: peerID)
 
@@ -383,7 +383,7 @@ struct MessageRouterTests {
         router.onMessageDropped = { messageID, _ in dropped.append(messageID) }
 
         router.sendPrivate("Old", to: peerID, recipientNickname: "Peer", messageID: "m11-old")
-        clock.now = clock.now.addingTimeInterval(24 * 60 * 60 - 60)
+        clock.now = clock.now.addingTimeInterval(72 * 60 * 60 - 60)
         router.sendPrivate("Fresh", to: peerID, recipientNickname: "Peer", messageID: "m11-fresh")
         clock.now = clock.now.addingTimeInterval(120)
 

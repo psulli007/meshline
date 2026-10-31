@@ -374,6 +374,9 @@ final class BLEService: NSObject {
     /// what one queue serializes comfortably, and a single writer makes the
     /// old per-field ownership comments and barrier discipline structural.
     private let messageQueue = DispatchQueue(label: "mesh.message")
+    /// Meshline v1.1: Wi-Fi (MultipeerConnectivity) link alongside BLE.
+    /// Created on first `startServices()`; carries the same packet frames.
+    private var wifiLink: MultipeerLinkService?
     private let messageQueueKey = DispatchSpecificKey<Void>()
     /// The only source of deferred engine work (see BLEEngineScheduling);
     /// injectable so tests drive protocol deadlines with a manual clock.
@@ -946,6 +949,7 @@ final class BLEService: NSObject {
         guard let lifecycleGeneration =
                 capturePanicLifecycleGeneration() else { return }
         initializeBluetoothManagersIfNeeded()
+        startWiFiLinkIfNeeded()
         if gossipSyncManager == nil {
             restartGossipManager()
         }
@@ -974,6 +978,7 @@ final class BLEService: NSObject {
     }
     
     func stopServices() {
+        wifiLink?.stop()
         let localIdentity = localIdentityState.snapshot()
         // Send leave message synchronously to ensure delivery
         var leavePacket = BitchatPacket(
@@ -1042,6 +1047,7 @@ final class BLEService: NSObject {
     /// pumping the main run loop. Close the radio and timers immediately;
     /// the identity/session cleanup follows synchronously.
     private func stopServicesImmediatelyForPanic() {
+        wifiLink?.stop()
         bleQueue.sync {
             pendingNotifications.removeAll()
         }
@@ -2268,6 +2274,63 @@ final class BLEService: NSObject {
         requireNoiseAuthenticatedPeerLink: Bool = false
     ) -> Bool {
         guard !isPanicSuspended else { return false }
+        // Meshline: mirror every frame onto Wi-Fi peers too, which bridges
+        // BLE-only and Wi-Fi-only neighbors. Sends that demand a direct or
+        // Noise-authenticated BLE link keep their strict semantics.
+        let strictLink = requireDirectPeerLink || requireNoiseAuthenticatedPeerLink
+        let sentOverWiFi = strictLink ? false : (wifiLink?.send(data) ?? false)
+        let sentOverBLE = sendOnBLELinks(
+            packet: packet,
+            data: data,
+            pad: pad,
+            directedOnlyPeer: directedOnlyPeer,
+            requireDirectPeerLink: requireDirectPeerLink,
+            requireNoiseAuthenticatedPeerLink: requireNoiseAuthenticatedPeerLink
+        )
+        return sentOverBLE || sentOverWiFi
+    }
+
+    // MARK: - Wi-Fi link (Meshline v1.1)
+
+    private func startWiFiLinkIfNeeded() {
+        // Unit tests drive BLEService with mocks; keep real radios out.
+        guard !TestEnvironment.isRunningTests else { return }
+        if wifiLink == nil {
+            let link = MultipeerLinkService()
+            link.onPacket = { [weak self] packet in
+                self?.ingestWiFiPacket(packet)
+            }
+            wifiLink = link
+        }
+        wifiLink?.start()
+    }
+
+    /// Feeds a Wi-Fi frame into the same pipeline as BLE frames: dedupe,
+    /// handlers, Noise decryption and TTL relay (which re-sends on both
+    /// radios). The claimed sender is unauthenticated here exactly as for a
+    /// relayed BLE frame; signatures and Noise sessions authenticate later.
+    private func ingestWiFiPacket(_ packet: BitchatPacket) {
+        guard let lifecycleGeneration = capturePanicLifecycleGeneration() else { return }
+        messageQueue.async { [weak self] in
+            guard let self,
+                  self.isCurrentPanicLifecycleGeneration(lifecycleGeneration) else {
+                return
+            }
+            let senderID = PeerID(hexData: packet.senderID)
+            guard senderID != self.myPeerID else { return }
+            self.handleReceivedPacket(packet, from: senderID)
+        }
+    }
+
+    @discardableResult
+    private func sendOnBLELinks(
+        packet: BitchatPacket,
+        data: Data,
+        pad: Bool,
+        directedOnlyPeer: PeerID?,
+        requireDirectPeerLink: Bool,
+        requireNoiseAuthenticatedPeerLink: Bool
+    ) -> Bool {
         let ingressRecord = ingressLinks.record(for: packet)
         var excludedPeerLinks = links(to: ingressRecord?.peerID)
         if requireNoiseAuthenticatedPeerLink {
