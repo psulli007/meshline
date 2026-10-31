@@ -170,6 +170,14 @@ final class BLEAnnounceHandler {
             )
         }
         var verifiedAnnounce = trustDecision.isVerified
+        // Meshline: remember signed phone hashes for offline contact matching.
+        if verifiedAnnounce, let phoneHash = announcement.phoneHash {
+            PhoneMatchDirectory.shared.record(
+                hash: phoneHash,
+                noisePublicKey: announcement.noisePublicKey,
+                nickname: announcement.nickname
+            )
+        }
 
         var isNewPeer = false
         var isReconnectedPeer = false

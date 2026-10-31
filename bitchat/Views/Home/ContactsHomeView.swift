@@ -48,6 +48,8 @@ struct ContactsHomeView: View {
     @EnvironmentObject private var verificationModel: VerificationModel
     @EnvironmentObject private var conversationUIModel: ConversationUIModel
     @StateObject private var labelStore = ContactLabelStore.shared
+    @StateObject private var importModel = ContactImportModel.shared
+    @Environment(\.openURL) private var openURL
 
     let onOpenChat: () -> Void
 
@@ -55,6 +57,8 @@ struct ContactsHomeView: View {
     @State private var showSettings = false
     @State private var renamingRow: MeshPeerRow?
     @State private var renameText = ""
+    @State private var showNewGroup = false
+    @State private var showPhoneNumber = false
     #if os(iOS)
     @State private var pickingContactFor: MeshPeerRow?
     #endif
@@ -70,9 +74,28 @@ struct ContactsHomeView: View {
                         showAddContact = true
                     } label: {
                         Label {
-                            Text(verbatim: "Add someone in person")
+                            Text(verbatim: "Add or check someone in person")
                         } icon: {
                             Image(systemName: "qrcode.viewfinder")
+                        }
+                    }
+                    Button {
+                        importModel.importContacts()
+                    } label: {
+                        Label {
+                            Text(verbatim: importModel.isImporting ? "Looking through your Contacts..." : "Find friends from my Contacts")
+                        } icon: {
+                            Image(systemName: "person.crop.circle.badge.plus")
+                        }
+                    }
+                    .disabled(importModel.isImporting)
+                    Button {
+                        showNewGroup = true
+                    } label: {
+                        Label {
+                            Text(verbatim: "New group")
+                        } icon: {
+                            Image(systemName: "person.3")
                         }
                     }
                     ShareLink(item: MeshlineInvite.message) {
@@ -96,6 +119,65 @@ struct ContactsHomeView: View {
                     }
                 } header: {
                     Text(verbatim: "My people")
+                } footer: {
+                    if let error = importModel.lastError {
+                        Text(verbatim: error)
+                    } else {
+                        Text(verbatim: "People found by phone number say \"Unverified number\" until you check them in person, because anyone can type any number.")
+                    }
+                }
+
+                if !peerListModel.groupRows.isEmpty {
+                    Section {
+                        ForEach(peerListModel.groupRows) { group in
+                            Button {
+                                peerListModel.startConversation(with: group.peerID)
+                                onOpenChat()
+                            } label: {
+                                VStack(alignment: .leading, spacing: 2) {
+                                    HStack {
+                                        Text(verbatim: group.name)
+                                            .font(.body.weight(.semibold))
+                                        Spacer()
+                                        if group.hasUnread {
+                                            Circle().fill(Color.blue).frame(width: 10, height: 10)
+                                        }
+                                    }
+                                    Text(verbatim: peerListModel.groupMemberNames(for: group.peerID).joined(separator: ", "))
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                        .lineLimit(2)
+                                }
+                                .contentShape(Rectangle())
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    } header: {
+                        Text(verbatim: "Groups")
+                    }
+                }
+
+                if !importModel.unmatched.isEmpty {
+                    Section {
+                        ForEach(importModel.unmatched) { contact in
+                            HStack {
+                                Text(verbatim: contact.name)
+                                Spacer()
+                                Button {
+                                    if let url = ContactImportModel.inviteURL(number: contact.number) {
+                                        openURL(url)
+                                    }
+                                } label: {
+                                    Text(verbatim: "Invite")
+                                }
+                                .buttonStyle(.bordered)
+                            }
+                        }
+                    } header: {
+                        Text(verbatim: "Not found nearby yet")
+                    } footer: {
+                        Text(verbatim: "They may not have Meshline, or just aren't in range. If they join and come near, they show up in My people.")
+                    }
                 }
 
                 Section {
@@ -116,6 +198,13 @@ struct ContactsHomeView: View {
             }
             .navigationTitle(Text(verbatim: "People"))
             .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button {
+                        showPhoneNumber = true
+                    } label: {
+                        Text(verbatim: "My number")
+                    }
+                }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         showSettings = true
@@ -132,6 +221,20 @@ struct ContactsHomeView: View {
         }
         .sheet(isPresented: $showSettings) {
             AppInfoView()
+        }
+        .sheet(isPresented: $showNewGroup) {
+            NewGroupSheet(
+                people: contacts + nearby,
+                nameFor: displayName(for:),
+                onCreated: onOpenChat
+            )
+            .environmentObject(peerListModel)
+        }
+        .sheet(isPresented: $showPhoneNumber) {
+            PhoneNumberSheet()
+        }
+        .onAppear {
+            if !MyPhoneNumber.wasAsked { showPhoneNumber = true }
         }
         #if os(iOS)
         .sheet(item: $pickingContactFor) { row in
@@ -172,6 +275,14 @@ struct ContactsHomeView: View {
         conversationUIModel.getFingerprint(for: row.peerID) ?? row.peerID.id
     }
 
+    private func isVerified(_ row: MeshPeerRow) -> Bool {
+        row.encryptionStatus == .noiseVerified || row.showsVerifiedBadgeWhenOffline
+    }
+
+    private func isUnverifiedNumber(_ row: MeshPeerRow) -> Bool {
+        !isVerified(row) && importModel.isPhoneMatched(fingerprint: labelKey(for: row))
+    }
+
     private func displayName(for row: MeshPeerRow) -> String {
         labelStore.label(for: labelKey(for: row)) ?? row.displayName
     }
@@ -195,6 +306,11 @@ struct ContactsHomeView: View {
                                 .foregroundColor(.blue)
                                 .accessibilityLabel(Text(verbatim: "Checked in person"))
                         }
+                    }
+                    if isUnverifiedNumber(row) {
+                        Text(verbatim: "Unverified number")
+                            .font(.caption.weight(.semibold))
+                            .foregroundColor(.orange)
                     }
                     Text(verbatim: ContactsHomeSections.statusText(row))
                         .font(.caption)
@@ -246,6 +362,151 @@ struct ContactsHomeView: View {
                     peerListModel.toggleFavorite(peerID: row.peerID)
                 } label: {
                     Text(verbatim: "Save to my people")
+                }
+            }
+        }
+    }
+}
+
+/// Pick people, name the group. Uses bitchat's end-to-end encrypted groups.
+struct NewGroupSheet: View {
+    @EnvironmentObject private var peerListModel: PeerListModel
+    @Environment(\.dismiss) private var dismiss
+    let people: [MeshPeerRow]
+    let nameFor: (MeshPeerRow) -> String
+    let onCreated: () -> Void
+
+    @State private var groupName = ""
+    @State private var picked: Set<PeerID> = []
+    @State private var notAdded: [String] = []
+
+    private var canCreate: Bool {
+        !groupName.trimmingCharacters(in: .whitespaces).isEmpty && !picked.isEmpty
+    }
+
+    var body: some View {
+        NavigationView {
+            List {
+                Section {
+                    TextField(text: $groupName) {
+                        Text(verbatim: "Group name")
+                    }
+                }
+                Section {
+                    if people.isEmpty {
+                        Text(verbatim: "Add some people first.")
+                            .foregroundColor(.secondary)
+                    }
+                    ForEach(people) { row in
+                        Button {
+                            if picked.contains(row.peerID) { picked.remove(row.peerID) } else { picked.insert(row.peerID) }
+                        } label: {
+                            HStack {
+                                Image(systemName: picked.contains(row.peerID) ? "checkmark.circle.fill" : "circle")
+                                    .foregroundColor(.accentColor)
+                                Text(verbatim: nameFor(row))
+                                Spacer()
+                                if !row.isConnected {
+                                    Text(verbatim: "Not nearby")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                }
+                            }
+                        }
+                        .buttonStyle(.plain)
+                    }
+                } header: {
+                    Text(verbatim: "Who's in it")
+                } footer: {
+                    Text(verbatim: "Group messages are end-to-end encrypted. People need to be nearby when you create the group to get the invite. Up to 16 people.")
+                }
+            }
+            .navigationTitle(Text(verbatim: "New group"))
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button { dismiss() } label: { Text(verbatim: "Cancel") }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button {
+                        create()
+                    } label: {
+                        Text(verbatim: "Create")
+                    }
+                    .disabled(!canCreate)
+                }
+            }
+            .alert(Text(verbatim: "Group created"), isPresented: Binding(
+                get: { !notAdded.isEmpty },
+                set: { if !$0 { notAdded = []; dismiss(); onCreated() } }
+            )) {
+                Button {} label: { Text(verbatim: "OK") }
+            } message: {
+                Text(verbatim: "Couldn't add \(notAdded.joined(separator: ", ")) yet. They need to be nearby. Open the group later to add them when they are.")
+            }
+        }
+    }
+
+    private func create() {
+        let members = people
+            .filter { picked.contains($0.peerID) }
+            .map { (peerID: $0.peerID, name: $0.displayName) }
+        let result = peerListModel.createGroup(named: groupName.trimmingCharacters(in: .whitespaces), members: members)
+        if !result.created {
+            notAdded = members.map(\.name)
+            return
+        }
+        if result.failedNames.isEmpty {
+            dismiss()
+            onCreated()
+        } else {
+            notAdded = result.failedNames
+        }
+    }
+}
+
+/// Ask for the user's own number. No SMS, never checked, stored on this
+/// phone; only a scrambled version is shared with nearby phones.
+struct PhoneNumberSheet: View {
+    @Environment(\.dismiss) private var dismiss
+    @State private var number = MyPhoneNumber.stored ?? ""
+    @State private var invalid = false
+
+    var body: some View {
+        NavigationView {
+            Form {
+                Section {
+                    TextField(text: $number) {
+                        Text(verbatim: "Your phone number")
+                    }
+                    #if os(iOS)
+                    .keyboardType(.phonePad)
+                    .textContentType(.telephoneNumber)
+                    #endif
+                    if invalid {
+                        Text(verbatim: "That doesn't look like a full number. Include the country code if you're outside the US.")
+                            .font(.caption)
+                            .foregroundColor(.red)
+                    }
+                } footer: {
+                    Text(verbatim: "Friends who have your number in their Contacts can find you, even with no internet. Your number stays on this phone. Nearby phones only get a scrambled version of it. Nothing is checked and no text is sent.")
+                }
+            }
+            .navigationTitle(Text(verbatim: "Your number"))
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button {
+                        if !MyPhoneNumber.wasAsked { MyPhoneNumber.save(nil) }
+                        dismiss()
+                    } label: {
+                        Text(verbatim: MyPhoneNumber.wasAsked ? "Cancel" : "Skip")
+                    }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button {
+                        if MyPhoneNumber.save(number) { dismiss() } else { invalid = true }
+                    } label: {
+                        Text(verbatim: "Save")
+                    }
                 }
             }
         }

@@ -192,11 +192,8 @@ final class ChatGroupCoordinator {
         guard !nickname.isEmpty else {
             return .error(message: String(localized: "system.group.usage_invite", comment: "Usage hint for /group invite"))
         }
-        guard let group = selectedGroup() else {
+        guard selectedGroup() != nil else {
             return .error(message: String(localized: "system.group.not_in_group", comment: "Error when a group command requires an open group chat"))
-        }
-        guard group.creatorFingerprint == context.myNoiseFingerprint() else {
-            return .error(message: String(localized: "system.group.creator_only", comment: "Error when a non-creator attempts a creator-only group action"))
         }
         guard let peerID = context.getPeerIDForNickname(nickname) else {
             return .error(message: String(
@@ -204,6 +201,18 @@ final class ChatGroupCoordinator {
                 locale: .current,
                 nickname
             ))
+        }
+        return inviteMember(peerID: peerID, nickname: nickname)
+    }
+
+    /// Meshline: invite a specific peer (from the People screen's New group
+    /// flow) into the currently open group, without nickname lookup.
+    func inviteMember(peerID: PeerID, nickname: String) -> CommandResult {
+        guard let group = selectedGroup() else {
+            return .error(message: String(localized: "system.group.not_in_group", comment: "Error when a group command requires an open group chat"))
+        }
+        guard group.creatorFingerprint == context.myNoiseFingerprint() else {
+            return .error(message: String(localized: "system.group.creator_only", comment: "Error when a non-creator attempts a creator-only group action"))
         }
         guard context.isPeerConnected(peerID) else {
             return .error(message: String(

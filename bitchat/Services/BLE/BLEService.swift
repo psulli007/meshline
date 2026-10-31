@@ -2867,7 +2867,8 @@ final class BLEService: NSObject {
             signingPublicKey: signingPub,
             directNeighbors: connectedPeerIDs,
             capabilities: advertisedCapabilities,
-            bridgeGeohash: advertisedBridgeCell
+            bridgeGeohash: advertisedBridgeCell,
+            phoneHash: MyPhoneNumber.announceHash
         )
         
         guard let payload = announcement.encode() else {

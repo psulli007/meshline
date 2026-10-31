@@ -108,6 +108,29 @@ final class PeerListModel: ObservableObject {
         chatViewModel.startPrivateChat(with: peerID)
     }
 
+    /// Meshline New group flow: creates the group, opens it, and invites each
+    /// picked person (they must be nearby so the invite rides an encrypted
+    /// session). Returns the names that could not be added.
+    @discardableResult
+    func createGroup(named name: String, members: [(peerID: PeerID, name: String)]) -> (created: Bool, failedNames: [String]) {
+        guard case .success = chatViewModel.groupCoordinator.createGroup(named: name) else {
+            return (false, members.map(\.name))
+        }
+        var failed: [String] = []
+        for member in members {
+            if case .error = chatViewModel.groupCoordinator.inviteMember(peerID: member.peerID, nickname: member.name) {
+                failed.append(member.name)
+            }
+        }
+        return (true, failed)
+    }
+
+    /// Member names for a group chat, creator first.
+    func groupMemberNames(for groupPeerID: PeerID) -> [String] {
+        guard let group = chatViewModel.groupStore.group(for: groupPeerID) else { return [] }
+        return group.members.map(\.nickname)
+    }
+
     func toggleFavorite(peerID: PeerID) {
         chatViewModel.toggleFavorite(peerID: peerID)
     }

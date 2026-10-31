@@ -1569,6 +1569,8 @@ final class ChatViewModel: ObservableObject, BitchatDelegate, SynchronousMessage
         panicNetworkLifecycle.stop()
         // Meshline: on-device names for people are personal data too.
         ContactLabelStore.shared.removeAll()
+        ContactImportModel.shared.removeAll()
+        MyPhoneNumber.wipe()
 
         // Establish both independent durable intents before erasing anything.
         // `wipeMedia` will still attempt deletion if neither write succeeds.

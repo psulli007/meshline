@@ -44,7 +44,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Meshline uses the camera to scan QR codes to verify peers.</string>
 	<key>NSContactsUsageDescription</key>
-	<string>Meshline lets you pick a name from your Contacts to label a person. Only the name you pick is used, and it stays on this phone.</string>
+	<string>Meshline checks which of your contacts are nearby on Meshline so you can message them. Numbers are scrambled and compared on this phone. Your contacts are never uploaded.</string>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>Meshline uses your local Wi-Fi to connect directly to nearby phones for faster, longer range messaging, even with no internet.</string>
 	<key>NSBonjourServices</key>

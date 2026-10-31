@@ -13,6 +13,9 @@ struct AnnouncementPacket {
     /// Coarse (cell-level) by design; lets mesh-only peers compose correctly
     /// tagged rendezvous events without their own location fix.
     let bridgeGeohash: String?
+    /// Meshline: salted hash of the user's self-declared phone number, for
+    /// offline contact matching. Unverified by design; old clients skip it.
+    let phoneHash: Data?
 
     init(
         nickname: String,
@@ -20,7 +23,8 @@ struct AnnouncementPacket {
         signingPublicKey: Data,
         directNeighbors: [Data]?,
         capabilities: PeerCapabilities? = nil,
-        bridgeGeohash: String? = nil
+        bridgeGeohash: String? = nil,
+        phoneHash: Data? = nil
     ) {
         self.nickname = nickname
         self.noisePublicKey = noisePublicKey
@@ -28,9 +32,11 @@ struct AnnouncementPacket {
         self.directNeighbors = directNeighbors
         self.capabilities = capabilities
         self.bridgeGeohash = bridgeGeohash
+        self.phoneHash = phoneHash
     }
 
     private enum TLVType: UInt8 {
+        case phoneHash = 0x40
         case nickname = 0x01
         case noisePublicKey = 0x02
         case signingPublicKey = 0x03
@@ -90,6 +96,12 @@ struct AnnouncementPacket {
             data.append(cellData)
         }
 
+        if let phoneHash, phoneHash.count == 16 {
+            data.append(TLVType.phoneHash.rawValue)
+            data.append(UInt8(phoneHash.count))
+            data.append(phoneHash)
+        }
+
         return data
     }
 
@@ -101,6 +113,7 @@ struct AnnouncementPacket {
         var directNeighbors: [Data]?
         var capabilities: PeerCapabilities?
         var bridgeGeohash: String?
+        var phoneHash: Data?
 
         while offset + 2 <= data.count {
             let typeRaw = data[offset]
@@ -137,6 +150,10 @@ struct AnnouncementPacket {
                     if length <= 12 {
                         bridgeGeohash = String(data: value, encoding: .utf8)
                     }
+                case .phoneHash:
+                    if length == 16 {
+                        phoneHash = Data(value)
+                    }
                 }
             } else {
                 // Unknown TLV; skip (tolerant decoder for forward compatibility)
@@ -151,7 +168,8 @@ struct AnnouncementPacket {
             signingPublicKey: signingPublicKey,
             directNeighbors: directNeighbors,
             capabilities: capabilities,
-            bridgeGeohash: bridgeGeohash
+            bridgeGeohash: bridgeGeohash,
+            phoneHash: phoneHash
         )
     }
 }
