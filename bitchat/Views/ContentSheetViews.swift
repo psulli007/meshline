@@ -86,7 +86,7 @@ struct ContentPeopleSheetView: View {
         Binding(
             get: {
                 scenePhase == .active
-                    && appChromeModel.showBluetoothAlert
+                    && appChromeModel.showBluetoothAlert && !ScreenshotMode.isActive
                     && !hasModalPresentation
             },
             set: { isPresented in

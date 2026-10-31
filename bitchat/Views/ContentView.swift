@@ -179,7 +179,7 @@ struct ContentView: View {
         Binding(
             get: {
                 scenePhase == .active
-                    && appChromeModel.showBluetoothAlert
+                    && appChromeModel.showBluetoothAlert && !ScreenshotMode.isActive
                     && !hasRootModalPresentation
             },
             set: { isPresented in
