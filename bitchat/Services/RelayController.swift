@@ -76,7 +76,9 @@ struct RelayController {
                 return max(UInt8(2), min(ttlCap, UInt8(5)))
             }
             if degree <= 2 {
-                return ttlCap
+                // Meshline: thin chains relay up to 8 hops (bridges long gaps
+                // while capping flood/battery cost; crowd limit above unchanged).
+                return min(ttlCap, UInt8(8))
             }
             let preferred = UInt8((isAnnounce || isUrgentBoardPost) ? 7 : 6)
             return max(UInt8(2), min(ttlCap, preferred))

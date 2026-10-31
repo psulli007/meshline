@@ -1,0 +1,29 @@
+# Meshline: unsigned iOS Release compile on every push/PR. Signed TestFlight
+# shipping (cloud signing via ASC API key) is added once the Faro team's
+# Program License Agreement is accepted and the ASC app record exists.
+name: Meshline CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  compile:
+    runs-on: macos-26
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - run: xcodebuild -version
+      - name: Release build (iOS, unsigned)
+        run: |
+          set -o pipefail
+          xcodebuild build -project bitchat.xcodeproj -scheme bitchat_iOS -configuration Release \
+            -destination 'generic/platform=iOS' -derivedDataPath "$RUNNER_TEMP/dd" \
+            -skipPackagePluginValidation -skipMacroValidation CODE_SIGNING_ALLOWED=NO \
+            | tee "$RUNNER_TEMP/build.log" | grep -E "error:|BUILD (SUCCEEDED|FAILED)" || true
+          grep -q "BUILD SUCCEEDED" "$RUNNER_TEMP/build.log"
+          /usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" -c "Print :ITSAppUsesNonExemptEncryption" \
+            "$RUNNER_TEMP/dd/Build/Products/Release-iphoneos/"*.app/Info.plist
+      - name: Log on failure
+        if: failure()
+        run: tail -150 "$RUNNER_TEMP/build.log"

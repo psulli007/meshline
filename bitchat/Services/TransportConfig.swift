@@ -5,7 +5,7 @@ import Foundation
 enum TransportConfig {
     // BLE / Protocol
     static let bleDefaultFragmentSize: Int = 469            // ~512 MTU minus protocol overhead
-    static let messageTTLDefault: UInt8 = 7                 // Default TTL for mesh flooding
+    static let messageTTLDefault: UInt8 = 10                // Default TTL for mesh flooding
     static let bleMaxInFlightAssemblies: Int = 128          // Cap concurrent fragment assemblies
     static let bleHighDegreeThreshold: Int = 6              // For adaptive TTL/probabilistic relays
     static let bleMaxConcurrentTransfers: Int = 2           // Limit simultaneous large media sends
@@ -31,7 +31,7 @@ enum TransportConfig {
     static let bleFragmentRelayMaxDelayMs: Int = 25         // Upper jitter bound for fragment relays
     // Fragment relay TTL in sparse graphs; matches messageTTLDefault so media
     // reaches as far as text. Dense graphs clamp harder in RelayController.
-    static let bleFragmentRelayTtlCap: UInt8 = 7
+    static let bleFragmentRelayTtlCap: UInt8 = 10
     static let bleFragmentRelayTtlCapDense: UInt8 = 5       // Contain fragment floods in dense graphs
 
     // Live voice (push-to-talk)

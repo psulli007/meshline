@@ -99,9 +99,9 @@ final class CourierStore {
     }
 
     enum Limits {
-        static let maxEnvelopes = 40
+        static let maxEnvelopes = 120 // Meshline storage cap
         /// Verified-tier mail can never crowd out favorites' share.
-        static let maxVerifiedEnvelopes = 20
+        static let maxVerifiedEnvelopes = 60
         static let maxPerFavoriteDepositor = 5
         static let maxPerVerifiedDepositor = 2
         /// Slack on top of the 24h lifetime for depositor clock skew.

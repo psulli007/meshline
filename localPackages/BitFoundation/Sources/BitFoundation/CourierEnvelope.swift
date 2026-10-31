@@ -40,7 +40,7 @@ public struct CourierEnvelope: Equatable {
     /// Couriered messages are text-sized; media transfers are out of scope.
     public static let maxCiphertextBytes = 16 * 1024
     /// Matches the outbox retention policy in MessageRouter.
-    public static let maxLifetimeSeconds: TimeInterval = 24 * 60 * 60
+    public static let maxLifetimeSeconds: TimeInterval = 72 * 60 * 60 // Meshline: 72h store-and-forward
     /// Cap on the copy budget a depositor can claim, so a malicious envelope
     /// cannot turn the courier network into an amplifier.
     public static let maxCopies: UInt8 = 8

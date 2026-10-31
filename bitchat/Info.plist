@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>bitchat</string>
+	<string>Meshline</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -31,6 +31,8 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.social-networking</string>
 	<key>LSMinimumSystemVersion</key>
@@ -40,13 +42,13 @@
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>Meshline uses Bluetooth to find other Meshline users nearby.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>bitchat uses the camera to scan QR codes to verify peers.</string>
+	<string>Meshline uses the camera to scan QR codes to verify peers.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>bitchat uses your location to compute optional geohash channels, bridge cells, and nearby place labels. Exact coordinates are not included in bitchat messages.</string>
+	<string>Meshline uses your location to compute optional geohash channels, bridge cells, and nearby place labels. Exact coordinates are not included in Meshline messages.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>bitchat uses the microphone while you record voice notes or hold live push-to-talk, then sends that audio to your selected mesh conversation.</string>
+	<string>Meshline uses the microphone while you record voice notes or hold live push-to-talk, then sends that audio to your selected mesh conversation.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>bitchat lets you pick images from your photo library to share with nearby peers.</string>
+	<string>Meshline lets you pick images from your photo library to share with nearby peers.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
