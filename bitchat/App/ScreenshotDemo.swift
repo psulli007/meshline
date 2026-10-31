@@ -63,8 +63,8 @@ enum ScreenshotDemo {
             ("Sam", "c3d4e5f60718293a", "Will meet you there. Stay safe everyone.", -60),
         ]
         return lines.map { s in
-            BitchatMessage(sender: s.0, content: s.1, timestamp: now.addingTimeInterval(s.3), isRelay: false,
-                           senderPeerID: PeerID(str: s.2))
+            BitchatMessage(sender: s.0, content: s.2, timestamp: now.addingTimeInterval(s.3), isRelay: false,
+                           senderPeerID: PeerID(str: s.1))
         }
     }
 
@@ -75,3 +75,14 @@ enum ScreenshotDemo {
     }
 }
 #endif
+
+/// Always false in Release builds.
+enum ScreenshotMode {
+    static var isActive: Bool {
+        #if DEBUG
+        return ScreenshotDemo.isActive
+        #else
+        return false
+        #endif
+    }
+}

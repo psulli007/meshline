@@ -547,7 +547,7 @@ struct ContentView: View {
             if let issue = ConnectivityIssue.resolve(
                 bluetoothState: appChromeModel.bluetoothState,
                 torBlocked: appChromeModel.torBlocked
-            ) {
+            ), !ScreenshotMode.isActive {
                 ConnectivityStatusBanner(issue: issue)
             }
         }

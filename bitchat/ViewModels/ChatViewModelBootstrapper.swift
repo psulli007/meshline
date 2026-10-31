@@ -673,6 +673,9 @@ private extension ChatViewModelBootstrapper {
     }
 
     func requestNotifications() {
+        #if DEBUG
+        if ScreenshotDemo.isActive { return }
+        #endif
         NotificationService.shared.requestAuthorization()
     }
 
