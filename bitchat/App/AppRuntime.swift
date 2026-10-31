@@ -51,6 +51,13 @@ final class AppRuntime: ObservableObject {
         let locationPresenceStore = LocationPresenceStore()
         let locationManager = LocationChannelManager.shared
         self.conversations = conversations
+        #if DEBUG
+        if ScreenshotDemo.isActive {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                MainActor.assumeIsolated { ScreenshotDemo.seed(conversations: conversations) }
+            }
+        }
+        #endif
         self.chatViewModel = ChatViewModel(
             keychain: keychain,
             idBridge: idBridge,

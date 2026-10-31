@@ -234,6 +234,13 @@ struct ContactsHomeView: View {
             PhoneNumberSheet()
         }
         .onAppear {
+            #if DEBUG
+            if let screen = ScreenshotDemo.screen {
+                if screen == "qr" { showAddContact = true }
+                if screen == "group" { showNewGroup = true }
+                return
+            }
+            #endif
             if !MyPhoneNumber.wasAsked { showPhoneNumber = true }
         }
         #if os(iOS)

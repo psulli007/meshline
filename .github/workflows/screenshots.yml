@@ -1,0 +1,54 @@
+# Meshline: App Store screenshots from the real app on the iOS Simulator.
+# Debug build only (ScreenshotDemo seeding is compiled out of Release).
+name: Screenshots
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  shots:
+    runs-on: macos-26
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pick 6.9-inch simulator
+        run: |
+          xcrun simctl list devicetypes | grep -i "iphone" | tail -15
+          for n in "iPhone 17 Pro Max" "iPhone 16 Pro Max" "iPhone 16 Plus" "iPhone Air"; do
+            T=$(xcrun simctl list devicetypes -j | python3 -c "import json,sys;d=json.load(sys.stdin)['devicetypes'];print(next((x['identifier'] for x in d if x['name']=='$n'),''))")
+            [ -n "$T" ] && break
+          done
+          R=$(xcrun simctl list runtimes -j | python3 -c "import json,sys;r=[x for x in json.load(sys.stdin)['runtimes'] if x['platform']=='iOS' and x['isAvailable']];print(r[-1]['identifier'])")
+          echo "type=$T runtime=$R"
+          UDID=$(xcrun simctl create shots "$T" "$R")
+          echo "UDID=$UDID" >> "$GITHUB_ENV"
+          xcrun simctl boot "$UDID"; xcrun simctl bootstatus "$UDID" -b
+      - name: Build (Debug, simulator)
+        run: |
+          set -o pipefail
+          xcodebuild build -project bitchat.xcodeproj -scheme "bitchat (iOS)" -configuration Debug \
+            -destination "id=$UDID" -derivedDataPath "$RUNNER_TEMP/dd" \
+            -skipPackagePluginValidation -skipMacroValidation CODE_SIGNING_ALLOWED=NO \
+            | tee "$RUNNER_TEMP/build.log" | grep -E "error:|BUILD (SUCCEEDED|FAILED)" || true
+          grep -q "BUILD SUCCEEDED" "$RUNNER_TEMP/build.log" || { tail -80 "$RUNNER_TEMP/build.log"; exit 1; }
+      - name: Capture
+        run: |
+          APP=$(ls -d "$RUNNER_TEMP"/dd/Build/Products/Debug-iphonesimulator/*.app | head -1)
+          BID=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP/Info.plist")
+          xcrun simctl install "$UDID" "$APP"
+          xcrun simctl status_bar "$UDID" override --time "9:41" --batteryState charged --batteryLevel 100 --cellularMode notSupported --wifiBars 0 || true
+          xcrun simctl privacy "$UDID" grant all "$BID" || true
+          mkdir -p shots
+          i=1
+          for s in people chat qr group; do
+            xcrun simctl terminate "$UDID" "$BID" || true
+            xcrun simctl launch "$UDID" "$BID" -MeshlineScreenshot "$s"
+            sleep 12
+            xcrun simctl io "$UDID" screenshot "shots/0${i}_$s.png"
+            i=$((i+1))
+          done
+          sips -g pixelWidth -g pixelHeight shots/*.png
+      - uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: shots

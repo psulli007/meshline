@@ -40,5 +40,8 @@ struct MeshlineHomeView: View {
                 }
                 .tag(Tab.chats)
         }
+        #if DEBUG
+        .onAppear { if ScreenshotDemo.screen == "chat" { selectedTab = .chats } }
+        #endif
     }
 }

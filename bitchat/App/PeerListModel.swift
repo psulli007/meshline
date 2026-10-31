@@ -127,6 +127,9 @@ final class PeerListModel: ObservableObject {
 
     /// Member names for a group chat, creator first.
     func groupMemberNames(for groupPeerID: PeerID) -> [String] {
+        #if DEBUG
+        if ScreenshotDemo.isActive && groupPeerID == ScreenshotDemo.groupPeerID { return ScreenshotDemo.groupMembers }
+        #endif
         guard let group = chatViewModel.groupStore.group(for: groupPeerID) else { return [] }
         return group.members.map(\.nickname)
     }
@@ -328,6 +331,12 @@ final class PeerListModel: ObservableObject {
         if visibleGeohashPeerCount != geohashPeople.count { visibleGeohashPeerCount = geohashPeople.count }
         if self.groupRows != groupRows { self.groupRows = groupRows }
         if self.recentChatRows != recentChatRows { self.recentChatRows = recentChatRows }
+        #if DEBUG
+        if ScreenshotDemo.isActive {
+            self.meshRows = ScreenshotDemo.meshRows(myPeerID: myPeerID, myName: chatViewModel.nickname)
+            self.groupRows = ScreenshotDemo.groupRows()
+        }
+        #endif
     }
 
     /// Direct conversations with people absent from the rosters above:
