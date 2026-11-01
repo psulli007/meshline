@@ -44,7 +44,7 @@ jobs:
           REC=$!
           sleep 2
           xcrun simctl launch "$UDID" "$BID"
-          for f in 1 2 3 4 5 6 7 8; do sleep 0.25; xcrun simctl io "$UDID" screenshot "shots/splash_$f.png" || true; done
+          for f in $(seq -w 1 40); do xcrun simctl io "$UDID" screenshot "shots/splash_$f.png" >/dev/null 2>&1 || true; done
           sleep 2
           kill -INT $REC; wait $REC || true
           i=1
