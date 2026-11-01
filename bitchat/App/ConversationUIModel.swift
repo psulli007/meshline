@@ -60,6 +60,7 @@ final class ConversationUIModel: ObservableObject {
 
     func sendMessage(_ message: String) {
         chatViewModel.sendMessage(message)
+        if !message.hasPrefix("/") { InviteNudge.shared.recordMessageSent() }
     }
 
     /// Resends a failed private message through the normal send path,

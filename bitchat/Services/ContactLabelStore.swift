@@ -52,10 +52,3 @@ final class ContactLabelStore: ObservableObject {
         return String(trimmed.prefix(maxLabelLength))
     }
 }
-
-/// Invite copy for the share sheet and Messages.
-enum MeshlineInvite {
-    static var message: String {
-        "Join me on Meshline, a messenger that keeps working with no internet or cell service: \(MeshlineShareLink.url.absoluteString)"
-    }
-}

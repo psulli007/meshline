@@ -59,6 +59,8 @@ struct ContactsHomeView: View {
     @State private var renameText = ""
     @State private var showNewGroup = false
     @State private var showPhoneNumber = false
+    @State private var showCheckIn = false
+    @State private var showEmergency = false
     #if os(iOS)
     @State private var pickingContactFor: MeshPeerRow?
     #endif
@@ -69,6 +71,36 @@ struct ContactsHomeView: View {
     var body: some View {
         NavigationView {
             List {
+                Section {
+                    HStack(spacing: 8) {
+                        Image(systemName: "dot.radiowaves.left.and.right")
+                            .foregroundColor(NearbyCounter.count(peerListModel.meshRows) > 0 ? .green : .secondary)
+                        Text(verbatim: NearbyCounter.text(NearbyCounter.count(peerListModel.meshRows)))
+                            .font(.subheadline.weight(.semibold))
+                    }
+                    .accessibilityElement(children: .combine)
+                    Button {
+                        showCheckIn = true
+                    } label: {
+                        Label {
+                            Text(verbatim: "Check in: I'm safe or need help")
+                        } icon: {
+                            Image(systemName: "checkmark.shield")
+                        }
+                    }
+                    Button {
+                        showEmergency = true
+                    } label: {
+                        Label {
+                            Text(verbatim: "Emergency tips (work offline)")
+                        } icon: {
+                            Image(systemName: "cross.case")
+                        }
+                    }
+                } footer: {
+                    Text(verbatim: "Each person running Meshline extends the network. Invite people near you.")
+                }
+
                 Section {
                     Button {
                         showAddContact = true
@@ -233,6 +265,13 @@ struct ContactsHomeView: View {
         .sheet(isPresented: $showPhoneNumber) {
             PhoneNumberSheet()
         }
+        .sheet(isPresented: $showCheckIn) {
+            CheckInSheet(people: contacts, nameFor: displayName(for:))
+                .environmentObject(peerListModel)
+        }
+        .sheet(isPresented: $showEmergency) {
+            EmergencyInfoView()
+        }
         .onAppear {
             #if DEBUG
             if let screen = ScreenshotDemo.screen {
@@ -313,6 +352,11 @@ struct ContactsHomeView: View {
                                 .foregroundColor(.blue)
                                 .accessibilityLabel(Text(verbatim: "Checked in person"))
                         }
+                    }
+                    if !isVerified(row), let voucher = peerListModel.vouchedByNames(for: row.peerID, label: { labelStore.label(for: $0) }).first {
+                        Text(verbatim: "Vouched by \(voucher)")
+                            .font(.caption.weight(.semibold))
+                            .foregroundColor(.blue)
                     }
                     if isUnverifiedNumber(row) {
                         Text(verbatim: "Unverified number")

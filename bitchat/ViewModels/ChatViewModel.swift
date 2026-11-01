@@ -1987,6 +1987,21 @@ final class ChatViewModel: ObservableObject, BitchatDelegate, SynchronousMessage
         identityManager.isVouched(fingerprint: fingerprint)
     }
 
+    /// Meshline: fingerprints of the people who vouched for this identity,
+    /// most recent first.
+    func voucherFingerprints(for fingerprint: String) -> [String] {
+        identityManager.validVouchers(for: fingerprint)
+            .sorted { $0.timestamp > $1.timestamp }
+            .map(\.voucherFingerprint)
+    }
+
+    /// Meshline: best known name for a fingerprint (my petname, else the
+    /// nickname they announced).
+    func knownName(forFingerprint fingerprint: String) -> String? {
+        let social = identityManager.getSocialIdentity(for: fingerprint)
+        return social?.localPetname ?? social?.claimedNickname
+    }
+
     // MARK: - BitchatDelegate Methods
 
     // MARK: - Command Handling

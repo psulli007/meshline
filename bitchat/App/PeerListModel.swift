@@ -134,6 +134,26 @@ final class PeerListModel: ObservableObject {
         return group.members.map(\.nickname)
     }
 
+    /// Meshline: names of people who vouched for this peer ("Vouched by Ana").
+    func vouchedByNames(for peerID: PeerID, label: (String) -> String?) -> [String] {
+        guard let fingerprint = chatViewModel.getFingerprint(for: peerID) else { return [] }
+        return chatViewModel.voucherFingerprints(for: fingerprint).compactMap { voucher in
+            label(voucher) ?? chatViewModel.knownName(forFingerprint: voucher)
+        }
+    }
+
+    /// Meshline: sends a check-in to each person and group. Each one is an
+    /// ordinary encrypted message, so it is relayed, carried forward and
+    /// bridged like any other. Returns how many sends were queued.
+    @discardableResult
+    func sendCheckIn(_ text: String, toPeople people: [PeerID], groups: [PeerID]) -> Int {
+        for peer in people { chatViewModel.sendPrivateMessage(text, to: peer) }
+        for group in groups { chatViewModel.groupCoordinator.sendGroupMessage(text, to: group) }
+        let total = people.count + groups.count
+        if total > 0 { InviteNudge.shared.recordMessageSent() }
+        return total
+    }
+
     func toggleFavorite(peerID: PeerID) {
         chatViewModel.toggleFavorite(peerID: peerID)
     }

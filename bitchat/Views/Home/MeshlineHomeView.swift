@@ -17,6 +17,7 @@ struct MeshlineHomeView: View {
     }
 
     @State private var selectedTab: Tab = .people
+    @StateObject private var inviteNudge = InviteNudge.shared
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -40,8 +41,46 @@ struct MeshlineHomeView: View {
                 }
                 .tag(Tab.chats)
         }
+        .sheet(isPresented: $inviteNudge.isShowing) {
+            InviteNudgeSheet()
+        }
         #if DEBUG
         .onAppear { if ScreenshotDemo.screen == "chat" { selectedTab = .chats } }
         #endif
+    }
+}
+
+/// Shown once after the first message: the network only works if people
+/// near you have the app.
+struct InviteNudgeSheet: View {
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Image(systemName: "person.3.fill")
+                .font(.system(size: 48))
+                .foregroundColor(.accentColor)
+            Text(verbatim: "Your first message is on its way")
+                .font(.title2.weight(.bold))
+                .multilineTextAlignment(.center)
+            Text(verbatim: "Meshline gets stronger with every phone that has it. Invite 3 people you would want to reach in an emergency, like family, roommates, or neighbors.")
+                .multilineTextAlignment(.center)
+                .foregroundColor(.secondary)
+            ShareLink(item: MeshlineInvite.message) {
+                Text(verbatim: "Invite 3 people")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.accentColor)
+                    .foregroundColor(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+            }
+            Button {
+                dismiss()
+            } label: {
+                Text(verbatim: "Not now")
+            }
+        }
+        .padding(28)
     }
 }
