@@ -98,7 +98,8 @@ struct MeshtasticLoRaTests {
         var reassembler = LoRaReassembler()
         var result: Data?
         for chunk in chunks.reversed() {
-            result = try reassembler.add(#require(LoRaFraming.parse(chunk)), from: 7)
+            let parsed = try #require(LoRaFraming.parse(chunk))
+            result = reassembler.add(parsed, from: 7)
         }
         #expect(result == frame)
         #expect(reassembler.pendingCount == 0)
@@ -117,11 +118,11 @@ struct MeshtasticLoRaTests {
         let second = try #require(LoRaFraming.parse(chunks[1]))
         var reassembler = LoRaReassembler()
         let now = Date(timeIntervalSince1970: 0)
-        #expect(reassembler.add(first, from: 1, now: now) == nil)
-        #expect(reassembler.add(second, from: 2, now: now) == nil)
+        do { let added = reassembler.add(first, from: 1, now: now); #expect(added == nil) }
+        do { let added = reassembler.add(second, from: 2, now: now); #expect(added == nil) }
         #expect(reassembler.pendingCount == 2)
         let later = now.addingTimeInterval(LoRaReassembler.partialLifetime + 1)
-        #expect(reassembler.add(second, from: 1, now: later) == nil)
+        do { let added = reassembler.add(second, from: 1, now: later); #expect(added == nil) }
         #expect(reassembler.pendingCount == 1)
     }
 
@@ -132,8 +133,12 @@ struct MeshtasticLoRaTests {
         let chunks = try #require(LoRaFraming.split(frame, messageID: 9))
         var reassembler = LoRaReassembler()
         var out: Data?
-        for c in chunks { out = try reassembler.add(#require(LoRaFraming.parse(c)), from: 3) }
-        let decoded = try #require(BinaryProtocol.decode(#require(out)))
+        for c in chunks {
+            let parsed = try #require(LoRaFraming.parse(c))
+            out = reassembler.add(parsed, from: 3)
+        }
+        let assembled = try #require(out)
+        let decoded = try #require(BinaryProtocol.decode(assembled))
         #expect(decoded.payload == original.payload)
         #expect(decoded.type == original.type)
     }
@@ -144,30 +149,30 @@ struct MeshtasticLoRaTests {
     func policy_filtersTypesAndEchoes() async {
         var policy = LoRaForwardPolicy()
         let now = Date(timeIntervalSince1970: 0)
-        #expect(!policy.admit(packet(type: .fileTransfer), chunkCount: 1, now: now))
-        #expect(!policy.admit(packet(type: .requestSync), chunkCount: 1, now: now))
-        #expect(policy.admit(packet(type: .message), chunkCount: 1, now: now))
+        do { let admitted = policy.admit(packet(type: .fileTransfer), chunkCount: 1, now: now); #expect(!admitted) }
+        do { let admitted = policy.admit(packet(type: .requestSync), chunkCount: 1, now: now); #expect(!admitted) }
+        do { let admitted = policy.admit(packet(type: .message), chunkCount: 1, now: now); #expect(admitted) }
         // Same packet again (for example a relay of it) is not resent.
-        #expect(!policy.admit(packet(type: .message), chunkCount: 1, now: now))
+        do { let admitted = policy.admit(packet(type: .message), chunkCount: 1, now: now); #expect(!admitted) }
 
         let fromLoRa = packet(type: .message, timestamp: 2_000)
         policy.noteReceived(fromLoRa)
-        #expect(!policy.admit(fromLoRa, chunkCount: 1, now: now))
+        do { let admitted = policy.admit(fromLoRa, chunkCount: 1, now: now); #expect(!admitted) }
     }
 
     @Test
     func policy_rateLimitsChunksAndAnnounces() async {
         var policy = LoRaForwardPolicy()
         let now = Date(timeIntervalSince1970: 0)
-        #expect(policy.admit(packet(type: .message, timestamp: 1), chunkCount: 4, now: now))
-        #expect(policy.admit(packet(type: .message, timestamp: 2), chunkCount: 4, now: now))
-        #expect(policy.admit(packet(type: .message, timestamp: 3), chunkCount: 4, now: now))
-        #expect(!policy.admit(packet(type: .message, timestamp: 4), chunkCount: 1, now: now))
-        #expect(policy.admit(packet(type: .message, timestamp: 5), chunkCount: 1, now: now.addingTimeInterval(20)))
+        do { let admitted = policy.admit(packet(type: .message, timestamp: 1), chunkCount: 4, now: now); #expect(admitted) }
+        do { let admitted = policy.admit(packet(type: .message, timestamp: 2), chunkCount: 4, now: now); #expect(admitted) }
+        do { let admitted = policy.admit(packet(type: .message, timestamp: 3), chunkCount: 4, now: now); #expect(admitted) }
+        do { let admitted = policy.admit(packet(type: .message, timestamp: 4), chunkCount: 1, now: now); #expect(!admitted) }
+        do { let admitted = policy.admit(packet(type: .message, timestamp: 5), chunkCount: 1, now: now.addingTimeInterval(20)); #expect(admitted) }
 
-        #expect(policy.admit(packet(type: .announce, timestamp: 10), chunkCount: 1, now: now.addingTimeInterval(600)))
-        #expect(!policy.admit(packet(type: .announce, timestamp: 11), chunkCount: 1, now: now.addingTimeInterval(700)))
-        #expect(policy.admit(packet(type: .announce, timestamp: 12), chunkCount: 1, now: now.addingTimeInterval(901)))
+        do { let admitted = policy.admit(packet(type: .announce, timestamp: 10), chunkCount: 1, now: now.addingTimeInterval(600)); #expect(admitted) }
+        do { let admitted = policy.admit(packet(type: .announce, timestamp: 11), chunkCount: 1, now: now.addingTimeInterval(700)); #expect(!admitted) }
+        do { let admitted = policy.admit(packet(type: .announce, timestamp: 12), chunkCount: 1, now: now.addingTimeInterval(901)); #expect(admitted) }
     }
 
     @Test

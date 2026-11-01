@@ -39,7 +39,8 @@ struct PhoneMatchingTests {
             directNeighbors: nil,
             phoneHash: hash
         )
-        let decoded = try #require(AnnouncementPacket.decode(from: try #require(packet.encode())))
+        let encoded = try #require(packet.encode())
+        let decoded = try #require(AnnouncementPacket.decode(from: encoded))
         #expect(decoded.phoneHash == hash)
         #expect(decoded.nickname == "mom")
     }
@@ -54,7 +55,7 @@ struct PhoneMatchingTests {
         #expect(directory.entry(for: Data([1])) == nil)
     }
 
-    @Test
+    @Test @MainActor
     func inviteURL_opensMessagesWithLink() throws {
         let url = try #require(ContactImportModel.inviteURL(number: "(415) 555-0123"))
         #expect(url.absoluteString.hasPrefix("sms:4155550123&body="))
