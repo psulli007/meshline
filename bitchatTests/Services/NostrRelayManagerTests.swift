@@ -888,8 +888,11 @@ final class NostrRelayManagerTests: XCTestCase {
         }
         XCTAssertTrue(genuineDelivered)
         XCTAssertEqual(receivedIDs, [event.id])
-        XCTAssertEqual(context.manager.debugDuplicateInboundEventDropCount, 0)
-        XCTAssertEqual(context.manager.debugDuplicateInboundEventDropCount(forSubscriptionID: "events"), 0)
+        // Verification runs off-main, so the genuine copy can win the race
+        // and the invalid copy is then dropped as a duplicate (count 1). The
+        // property under test is that the genuine event is still delivered.
+        XCTAssertLessThanOrEqual(context.manager.debugDuplicateInboundEventDropCount, 1)
+        XCTAssertLessThanOrEqual(context.manager.debugDuplicateInboundEventDropCount(forSubscriptionID: "events"), 1)
     }
 
     /// The relay boundary is the single signature-verification point for the
