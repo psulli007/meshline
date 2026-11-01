@@ -37,6 +37,7 @@ jobs:
           UDID=$(xcrun simctl list devices available -j | python3 -c "import json,sys;d=json.load(sys.stdin)['devices'];print(next(x['udid'] for k,v in d.items() if 'iOS' in k for x in v if x['name'].startswith('iPhone')))")
           echo "SIM=$UDID" >> "$GITHUB_ENV"
       - name: Unit + integration tests (iOS simulator)
+        timeout-minutes: 45
         env:
           BITCHAT_SKIP_PERF_BASELINES: "1"
         run: |
@@ -45,8 +46,10 @@ jobs:
             -destination "id=$SIM" -derivedDataPath "$RUNNER_TEMP/dd" \
             -skipPackagePluginValidation -skipMacroValidation CODE_SIGNING_ALLOWED=NO \
             -skip-testing:bitchatTests/PerformanceBaselineTests \
+            -parallel-testing-enabled NO \
+            -test-timeouts-enabled YES -default-test-execution-time-allowance 60 -maximum-test-execution-time-allowance 180 \
             -resultBundlePath "$RUNNER_TEMP/tests.xcresult" 2>&1 | tee "$RUNNER_TEMP/test.log" \
-            | grep -E "error:|failed|Executed|TEST (SUCCEEDED|FAILED)" || true
+            | grep -E --line-buffered "error:|failed|passed after|Executed|TEST (SUCCEEDED|FAILED)|Test run|started" || true
           grep -q "TEST SUCCEEDED" "$RUNNER_TEMP/test.log"
       - name: Failures
         if: failure()
