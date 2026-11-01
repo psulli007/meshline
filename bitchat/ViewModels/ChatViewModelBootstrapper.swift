@@ -676,7 +676,11 @@ private extension ChatViewModelBootstrapper {
         #if DEBUG
         if ScreenshotDemo.isActive { return }
         #endif
-        NotificationService.shared.requestAuthorization()
+        // Ask after the ~1.6 s launch splash so the system prompt does not
+        // cover it. Nothing else waits on this.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
+            NotificationService.shared.requestAuthorization()
+        }
     }
 
     func registerObservers() {
