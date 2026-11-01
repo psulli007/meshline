@@ -377,7 +377,7 @@ struct ContentHeaderView: View {
                 pendingShareGeohash = nil
             }
         } message: {
-            Text(String(localized: "channel.share.precision_warning.message", defaultValue: "this channel covers a small area. an invite sent over sms or imessage is visible to the carrier and both handsets — it discloses interest in that place, not only that someone uses bitchat.", comment: "Body of the confirmation before sharing a fine-precision geohash invite"))
+            Text(String(localized: "channel.share.precision_warning.message", defaultValue: "this channel covers a small area. an invite sent over sms or imessage is visible to the carrier and both handsets — it discloses interest in that place, not only that someone uses Meshline.", comment: "Body of the confirmation before sharing a fine-precision geohash invite"))
         }
         .sheet(item: $activeSharePayload) { payload in
             ShareActivityView(text: payload.text)

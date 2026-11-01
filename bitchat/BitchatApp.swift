@@ -18,6 +18,7 @@ struct BitchatApp: App {
     @AppStorage(AppTheme.storageKey) private var appThemeRawValue = AppTheme.matrix.rawValue
     #if os(iOS)
     @Environment(\.scenePhase) var scenePhase
+    @State private var showSplash = !ProcessInfo.processInfo.arguments.contains("-UITestSkipSplash")
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     #elseif os(macOS)
     @NSApplicationDelegateAdaptor(MacAppDelegate.self) var appDelegate
@@ -32,7 +33,14 @@ struct BitchatApp: App {
         WindowGroup {
             Group {
                 #if os(iOS)
-                MeshlineHomeView()
+                ZStack {
+                    MeshlineHomeView()
+                    if showSplash {
+                        MeshlineSplashView { showSplash = false }
+                            .transition(.opacity)
+                            .zIndex(1)
+                    }
+                }
                 #else
                 ContentView()
                 #endif

@@ -39,6 +39,14 @@ jobs:
           xcrun simctl status_bar "$UDID" override --time "9:41" --batteryState charged --batteryLevel 100 --cellularMode notSupported --wifiBars 0 || true
           xcrun simctl privacy "$UDID" grant all "$BID" || true
           mkdir -p shots
+          xcrun simctl terminate "$UDID" "$BID" || true
+          xcrun simctl io "$UDID" recordVideo --codec h264 --force shots/splash.mp4 &
+          REC=$!
+          sleep 2
+          xcrun simctl launch "$UDID" "$BID"
+          for f in 1 2 3 4 5 6 7 8; do sleep 0.25; xcrun simctl io "$UDID" screenshot "shots/splash_$f.png" || true; done
+          sleep 2
+          kill -INT $REC; wait $REC || true
           i=1
           for s in people chat qr group; do
             xcrun simctl terminate "$UDID" "$BID" || true

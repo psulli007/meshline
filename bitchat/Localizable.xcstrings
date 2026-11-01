@@ -13958,19 +13958,19 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 أهل bitchat بالقرب منك!"
+            "value" : "👥 أهل Meshline بالقرب منك!"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 কাছেই bitchat-এর লোকজন!"
+            "value" : "👥 কাছেই Meshline-এর লোকজন!"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 bitchatter in der nähe!"
+            "value" : "👥 Meshline users in der nähe!"
           }
         },
         "en" : {
@@ -13982,7 +13982,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 ¡bitchateros cerca!"
+            "value" : "👥 ¡Meshlineeros cerca!"
           }
         },
         "fa" : {
@@ -13994,13 +13994,13 @@
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 may mga bitchatter sa malapit!"
+            "value" : "👥 may mga Meshline users sa malapit!"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 des bitchatteurs dans le coin !"
+            "value" : "👥 des Meshlineteurs dans le coin !"
           }
         },
         "he" : {
@@ -14012,97 +14012,97 @@
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 पास में bitchat वाले लोग!"
+            "value" : "👥 पास में Meshline वाले लोग!"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 ada anak bitchat di sekitar!"
+            "value" : "👥 ada anak Meshline di sekitar!"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 bitchatter nei paraggi!"
+            "value" : "👥 Meshline users nei paraggi!"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 近くにbitchat仲間がいるよ！"
+            "value" : "👥 近くにMeshline仲間がいるよ！"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 근처에 bitchat 친구들이 있어요!"
+            "value" : "👥 근처에 Meshline 친구들이 있어요!"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 ada geng bitchat berdekatan!"
+            "value" : "👥 ada geng Meshline berdekatan!"
           }
         },
         "ne" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 नजिकै bitchat का मान्छेहरू!"
+            "value" : "👥 नजिकै Meshline का मान्छेहरू!"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 bitchatters in de buurt!"
+            "value" : "👥 Meshline users in de buurt!"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 bitchatterzy w pobliżu!"
+            "value" : "👥 Meshline userszy w pobliżu!"
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 bitchatters por perto!"
+            "value" : "👥 Meshline users por perto!"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 bitchatters por perto!"
+            "value" : "👥 Meshline users por perto!"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 битчаттеры рядом!"
+            "value" : "👥 пользователи Meshline рядом!"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 bitchattare i närheten!"
+            "value" : "👥 Meshlinetare i närheten!"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 அருகிலேயே bitchat ஆட்கள்!"
+            "value" : "👥 அருகிலேயே Meshline ஆட்கள்!"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 มีชาว bitchat อยู่ใกล้ๆ!"
+            "value" : "👥 มีชาว Meshline อยู่ใกล้ๆ!"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 yakınlarda bitchat'çiler var!"
+            "value" : "👥 yakınlarda Meshline'çiler var!"
           }
         },
         "uk" : {
@@ -14114,25 +14114,25 @@
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 قریب ہی bitchat والے موجود ہیں!"
+            "value" : "👥 قریب ہی Meshline والے موجود ہیں!"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 có dân bitchat ở gần đây!"
+            "value" : "👥 có dân Meshline ở gần đây!"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 附近有 bitchat 小伙伴！"
+            "value" : "👥 附近有 Meshline 小伙伴！"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "👥 附近有 bitchat 夥伴！"
+            "value" : "👥 附近有 Meshline 夥伴！"
           }
         }
       }
@@ -18794,19 +18794,19 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "المسح غير مكتمل — قد تبقى بعض البيانات. أغلق bitchat وأعد فتحه لإعادة المحاولة."
+            "value" : "المسح غير مكتمل — قد تبقى بعض البيانات. أغلق Meshline وأعد فتحه لإعادة المحاولة."
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "মুছে ফেলা অসম্পূর্ণ — কিছু ডেটা থেকে যেতে পারে। আবার চেষ্টা করতে bitchat বন্ধ করে আবার খুলুন।"
+            "value" : "মুছে ফেলা অসম্পূর্ণ — কিছু ডেটা থেকে যেতে পারে। আবার চেষ্টা করতে Meshline বন্ধ করে আবার খুলুন।"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "löschen unvollständig — einige daten könnten übrig sein. bitchat beenden und erneut öffnen, um es noch einmal zu versuchen."
+            "value" : "löschen unvollständig — einige daten könnten übrig sein. Meshline beenden und erneut öffnen, um es noch einmal zu versuchen."
           }
         },
         "en" : {
@@ -18818,157 +18818,157 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "borrado incompleto — pueden quedar algunos datos. cierra y vuelve a abrir bitchat para reintentar."
+            "value" : "borrado incompleto — pueden quedar algunos datos. cierra y vuelve a abrir Meshline para reintentar."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "پاک‌سازی ناقص است — ممکن است برخی داده‌ها باقی مانده باشند. برای تلاش دوباره bitchat را ببندید و دوباره باز کنید."
+            "value" : "پاک‌سازی ناقص است — ممکن است برخی داده‌ها باقی مانده باشند. برای تلاش دوباره Meshline را ببندید و دوباره باز کنید."
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "hindi kumpleto ang pagbura — maaaring may natirang data. isara at buksan muli ang bitchat para subukan ulit."
+            "value" : "hindi kumpleto ang pagbura — maaaring may natirang data. isara at buksan muli ang Meshline para subukan ulit."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "effacement incomplet — des données peuvent subsister. quittez et rouvrez bitchat pour réessayer."
+            "value" : "effacement incomplet — des données peuvent subsister. quittez et rouvrez Meshline pour réessayer."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "המחיקה לא הושלמה — ייתכן שנשארו נתונים. סגרו ופתחו מחדש את bitchat כדי לנסות שוב."
+            "value" : "המחיקה לא הושלמה — ייתכן שנשארו נתונים. סגרו ופתחו מחדש את Meshline כדי לנסות שוב."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "मिटाना अधूरा रहा — कुछ डेटा बच सकता है। फिर से कोशिश करने के लिए bitchat बंद करके दोबारा खोलें।"
+            "value" : "मिटाना अधूरा रहा — कुछ डेटा बच सकता है। फिर से कोशिश करने के लिए Meshline बंद करके दोबारा खोलें।"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "penghapusan belum selesai — sebagian data mungkin tersisa. tutup dan buka kembali bitchat untuk mencoba lagi."
+            "value" : "penghapusan belum selesai — sebagian data mungkin tersisa. tutup dan buka kembali Meshline untuk mencoba lagi."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "cancellazione incompleta — alcuni dati potrebbero rimanere. chiudi e riapri bitchat per riprovare."
+            "value" : "cancellazione incompleta — alcuni dati potrebbero rimanere. chiudi e riapri Meshline per riprovare."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "消去が完了していません — データが残っている可能性があります。bitchat を終了して開き直すと再試行します。"
+            "value" : "消去が完了していません — データが残っている可能性があります。Meshline を終了して開き直すと再試行します。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "삭제가 완료되지 않았습니다 — 일부 데이터가 남아 있을 수 있습니다. bitchat을 종료했다가 다시 열면 재시도합니다."
+            "value" : "삭제가 완료되지 않았습니다 — 일부 데이터가 남아 있을 수 있습니다. Meshline을 종료했다가 다시 열면 재시도합니다."
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "pemadaman tidak lengkap — sebahagian data mungkin masih ada. tutup dan buka semula bitchat untuk mencuba lagi."
+            "value" : "pemadaman tidak lengkap — sebahagian data mungkin masih ada. tutup dan buka semula Meshline untuk mencuba lagi."
           }
         },
         "ne" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "मेटाउने काम अधूरो — केही डेटा बाँकी रहन सक्छ। पुनः प्रयास गर्न bitchat बन्द गरेर फेरि खोल्नुहोस्।"
+            "value" : "मेटाउने काम अधूरो — केही डेटा बाँकी रहन सक्छ। पुनः प्रयास गर्न Meshline बन्द गरेर फेरि खोल्नुहोस्।"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "wissen onvolledig — er kunnen gegevens achterblijven. sluit bitchat en open het opnieuw om het nogmaals te proberen."
+            "value" : "wissen onvolledig — er kunnen gegevens achterblijven. sluit Meshline en open het opnieuw om het nogmaals te proberen."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "wymazywanie niekompletne — część danych może pozostać. zamknij i otwórz bitchat ponownie, aby spróbować jeszcze raz."
+            "value" : "wymazywanie niekompletne — część danych może pozostać. zamknij i otwórz Meshline ponownie, aby spróbować jeszcze raz."
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "limpeza incompleta — alguns dados podem permanecer. feche e reabra o bitchat para tentar novamente."
+            "value" : "limpeza incompleta — alguns dados podem permanecer. feche e reabra o Meshline para tentar novamente."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "limpeza incompleta — alguns dados podem permanecer. feche e reabra o bitchat para tentar novamente."
+            "value" : "limpeza incompleta — alguns dados podem permanecer. feche e reabra o Meshline para tentar novamente."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "стирание не завершено — часть данных могла остаться. закройте и снова откройте bitchat, чтобы повторить."
+            "value" : "стирание не завершено — часть данных могла остаться. закройте и снова откройте Meshline, чтобы повторить."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "raderingen är ofullständig — viss data kan finnas kvar. avsluta och öppna bitchat igen för att försöka på nytt."
+            "value" : "raderingen är ofullständig — viss data kan finnas kvar. avsluta och öppna Meshline igen för att försöka på nytt."
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "அழித்தல் முழுமையடையவில்லை — சில தரவு எஞ்சியிருக்கலாம். மீண்டும் முயற்சிக்க bitchat ஐ மூடி மீண்டும் திறக்கவும்."
+            "value" : "அழித்தல் முழுமையடையவில்லை — சில தரவு எஞ்சியிருக்கலாம். மீண்டும் முயற்சிக்க Meshline ஐ மூடி மீண்டும் திறக்கவும்."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "การล้างข้อมูลไม่สมบูรณ์ — อาจมีข้อมูลหลงเหลืออยู่ ปิดแล้วเปิด bitchat ใหม่เพื่อลองอีกครั้ง"
+            "value" : "การล้างข้อมูลไม่สมบูรณ์ — อาจมีข้อมูลหลงเหลืออยู่ ปิดแล้วเปิด Meshline ใหม่เพื่อลองอีกครั้ง"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "silme tamamlanmadı — bazı veriler kalmış olabilir. yeniden denemek için bitchat'i kapatıp tekrar açın."
+            "value" : "silme tamamlanmadı — bazı veriler kalmış olabilir. yeniden denemek için Meshline'i kapatıp tekrar açın."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "стирання не завершено — частина даних могла залишитися. закрийте та знову відкрийте bitchat, щоб повторити."
+            "value" : "стирання не завершено — частина даних могла залишитися. закрийте та знову відкрийте Meshline, щоб повторити."
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "مٹانا مکمل نہیں ہوا — کچھ ڈیٹا باقی رہ سکتا ہے۔ دوبارہ کوشش کے لیے bitchat بند کر کے دوبارہ کھولیں۔"
+            "value" : "مٹانا مکمل نہیں ہوا — کچھ ڈیٹا باقی رہ سکتا ہے۔ دوبارہ کوشش کے لیے Meshline بند کر کے دوبارہ کھولیں۔"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "xoá chưa hoàn tất — một số dữ liệu có thể còn lại. thoát và mở lại bitchat để thử lại."
+            "value" : "xoá chưa hoàn tất — một số dữ liệu có thể còn lại. thoát và mở lại Meshline để thử lại."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "清除未完成 — 可能仍有数据残留。请退出并重新打开 bitchat 重试。"
+            "value" : "清除未完成 — 可能仍有数据残留。请退出并重新打开 Meshline 重试。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "清除未完成 — 可能仍有資料殘留。請結束並重新開啟 bitchat 重試。"
+            "value" : "清除未完成 — 可能仍有資料殘留。請結束並重新開啟 Meshline 重試。"
           }
         }
       }
@@ -19537,19 +19537,19 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "en" : {
@@ -19561,157 +19561,157 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "ne" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat"
+            "value" : "Meshline"
           }
         }
       }
@@ -33994,181 +33994,181 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "انضم إلى قناة #%1$@ على bitchat: bitchat://geohash/%1$@ — جديد على bitchat؟ حمّله من %2$@ ثم اكتب #%1$@ ضمن قنوات الموقع."
+            "value" : "انضم إلى قناة #%1$@ على Meshline: Meshline://geohash/%1$@ — جديد على Meshline؟ حمّله من %2$@ ثم اكتب #%1$@ ضمن قنوات الموقع."
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat-এ #%1$@ চ্যানেলে যোগ দিন: bitchat://geohash/%1$@ — bitchat-এ নতুন? %2$@ থেকে নিন, তারপর লোকেশন চ্যানেলে #%1$@ টাইপ করুন।"
+            "value" : "Meshline-এ #%1$@ চ্যানেলে যোগ দিন: Meshline://geohash/%1$@ — Meshline-এ নতুন? %2$@ থেকে নিন, তারপর লোকেশন চ্যানেলে #%1$@ টাইপ করুন।"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "tritt dem #%1$@-kanal auf bitchat bei: bitchat://geohash/%1$@ — neu bei bitchat? hole es unter %2$@ und tippe dann #%1$@ unter standort-kanäle."
+            "value" : "tritt dem #%1$@-kanal auf Meshline bei: Meshline://geohash/%1$@ — neu bei Meshline? hole es unter %2$@ und tippe dann #%1$@ unter standort-kanäle."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "join the #%1$@ channel on Meshline: bitchat://geohash/%1$@ — new to Meshline? get it at %2$@ then type #%1$@ under location channels."
+            "value" : "join the #%1$@ channel on Meshline: Meshline://geohash/%1$@ — new to Meshline? get it at %2$@ then type #%1$@ under location channels."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "únete al canal #%1$@ en bitchat: bitchat://geohash/%1$@ — ¿nuevo en bitchat? consíguelo en %2$@ y luego escribe #%1$@ en canales de ubicación."
+            "value" : "únete al canal #%1$@ en Meshline: Meshline://geohash/%1$@ — ¿nuevo en Meshline? consíguelo en %2$@ y luego escribe #%1$@ en canales de ubicación."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "به کانال #%1$@ در bitchat بپیوندید: bitchat://geohash/%1$@ — تازه‌واردید؟ از %2$@ بگیرید و سپس #%1$@ را در کانال‌های موقعیت وارد کنید."
+            "value" : "به کانال #%1$@ در Meshline بپیوندید: Meshline://geohash/%1$@ — تازه‌واردید؟ از %2$@ بگیرید و سپس #%1$@ را در کانال‌های موقعیت وارد کنید."
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "sumali sa #%1$@ channel sa bitchat: bitchat://geohash/%1$@ — bago sa bitchat? kunin ito sa %2$@ tapos i-type ang #%1$@ sa mga channel ng lokasyon."
+            "value" : "sumali sa #%1$@ channel sa Meshline: Meshline://geohash/%1$@ — bago sa Meshline? kunin ito sa %2$@ tapos i-type ang #%1$@ sa mga channel ng lokasyon."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "rejoins le canal #%1$@ sur bitchat : bitchat://geohash/%1$@ — nouveau sur bitchat ? télécharge-le sur %2$@ puis saisis #%1$@ dans les canaux localisation."
+            "value" : "rejoins le canal #%1$@ sur Meshline : Meshline://geohash/%1$@ — nouveau sur Meshline ? télécharge-le sur %2$@ puis saisis #%1$@ dans les canaux localisation."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "הצטרף לערוץ #%1$@ ב-bitchat: bitchat://geohash/%1$@ — חדש ב-bitchat? הורד מ-%2$@ ואז הקלד #%1$@ תחת ערוצי מיקום."
+            "value" : "הצטרף לערוץ #%1$@ ב-Meshline: Meshline://geohash/%1$@ — חדש ב-Meshline? הורד מ-%2$@ ואז הקלד #%1$@ תחת ערוצי מיקום."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat पर #%1$@ चैनल से जुड़ें: bitchat://geohash/%1$@ — bitchat नए हैं? %2$@ से पाएँ, फिर लोकेशन चैनल में #%1$@ टाइप करें।"
+            "value" : "Meshline पर #%1$@ चैनल से जुड़ें: Meshline://geohash/%1$@ — Meshline नए हैं? %2$@ से पाएँ, फिर लोकेशन चैनल में #%1$@ टाइप करें।"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "gabung ke kanal #%1$@ di bitchat: bitchat://geohash/%1$@ — baru di bitchat? unduh di %2$@ lalu ketik #%1$@ di kanal lokasi."
+            "value" : "gabung ke kanal #%1$@ di Meshline: Meshline://geohash/%1$@ — baru di Meshline? unduh di %2$@ lalu ketik #%1$@ di kanal lokasi."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "entra nel canale #%1$@ su bitchat: bitchat://geohash/%1$@ — nuovo su bitchat? scaricalo da %2$@ e poi digita #%1$@ nei canali posizione."
+            "value" : "entra nel canale #%1$@ su Meshline: Meshline://geohash/%1$@ — nuovo su Meshline? scaricalo da %2$@ e poi digita #%1$@ nei canali posizione."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchatの#%1$@チャンネルに参加: bitchat://geohash/%1$@ — はじめてですか？ %2$@ から入手し、ロケーションチャンネルで #%1$@ と入力してください。"
+            "value" : "Meshlineの#%1$@チャンネルに参加: Meshline://geohash/%1$@ — はじめてですか？ %2$@ から入手し、ロケーションチャンネルで #%1$@ と入力してください。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat의 #%1$@ 채널에 참여하세요: bitchat://geohash/%1$@ — bitchat이 처음이신가요? %2$@에서 받은 뒤 위치 채널에서 #%1$@을(를) 입력하세요."
+            "value" : "Meshline의 #%1$@ 채널에 참여하세요: Meshline://geohash/%1$@ — Meshline이 처음이신가요? %2$@에서 받은 뒤 위치 채널에서 #%1$@을(를) 입력하세요."
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "sertai saluran #%1$@ di bitchat: bitchat://geohash/%1$@ — baharu di bitchat? dapatkannya di %2$@ kemudian taip #%1$@ di bawah kanal lokasi."
+            "value" : "sertai saluran #%1$@ di Meshline: Meshline://geohash/%1$@ — baharu di Meshline? dapatkannya di %2$@ kemudian taip #%1$@ di bawah kanal lokasi."
           }
         },
         "ne" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat मा #%1$@ च्यानलमा सामेल हुनुहोस्: bitchat://geohash/%1$@ — bitchat मा नयाँ? %2$@ बाट लिनुहोस्, त्यसपछि स्थान च्यानलमा #%1$@ टाइप गर्नुहोस्।"
+            "value" : "Meshline मा #%1$@ च्यानलमा सामेल हुनुहोस्: Meshline://geohash/%1$@ — Meshline मा नयाँ? %2$@ बाट लिनुहोस्, त्यसपछि स्थान च्यानलमा #%1$@ टाइप गर्नुहोस्।"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "doe mee met het #%1$@-kanaal op bitchat: bitchat://geohash/%1$@ — nieuw bij bitchat? haal het op %2$@ en typ daarna #%1$@ onder locatiekanalen."
+            "value" : "doe mee met het #%1$@-kanaal op Meshline: Meshline://geohash/%1$@ — nieuw bij Meshline? haal het op %2$@ en typ daarna #%1$@ onder locatiekanalen."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "dołącz do kanału #%1$@ w bitchat: bitchat://geohash/%1$@ — nowość w bitchat? pobierz z %2$@, a potem wpisz #%1$@ w kanałach lokalizacji."
+            "value" : "dołącz do kanału #%1$@ w Meshline: Meshline://geohash/%1$@ — nowość w Meshline? pobierz z %2$@, a potem wpisz #%1$@ w kanałach lokalizacji."
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "junta-te ao canal #%1$@ no bitchat: bitchat://geohash/%1$@ — novo no bitchat? obtém-no em %2$@ e depois escreve #%1$@ em canais de localização."
+            "value" : "junta-te ao canal #%1$@ no Meshline: Meshline://geohash/%1$@ — novo no Meshline? obtém-no em %2$@ e depois escreve #%1$@ em canais de localização."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "entre no canal #%1$@ no bitchat: bitchat://geohash/%1$@ — novo no bitchat? baixe em %2$@ e depois digite #%1$@ em canais de localização."
+            "value" : "entre no canal #%1$@ no Meshline: Meshline://geohash/%1$@ — novo no Meshline? baixe em %2$@ e depois digite #%1$@ em canais de localização."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "присоединяйся к каналу #%1$@ в bitchat: bitchat://geohash/%1$@ — впервые в bitchat? скачай на %2$@, затем введи #%1$@ в каналах локации."
+            "value" : "присоединяйся к каналу #%1$@ в Meshline: Meshline://geohash/%1$@ — впервые в Meshline? скачай на %2$@, затем введи #%1$@ в каналах локации."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "gå med i #%1$@-kanalen på bitchat: bitchat://geohash/%1$@ — ny på bitchat? hämta den på %2$@ och skriv sedan #%1$@ under platskanaler."
+            "value" : "gå med i #%1$@-kanalen på Meshline: Meshline://geohash/%1$@ — ny på Meshline? hämta den på %2$@ och skriv sedan #%1$@ under platskanaler."
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat-இல் #%1$@ சேனலில் சேரவும்: bitchat://geohash/%1$@ — bitchat புதியவரா? %2$@ இல் பெற்று, பின்னர் இட சேனல்களில் #%1$@ என தட்டச்சு செய்யவும்."
+            "value" : "Meshline-இல் #%1$@ சேனலில் சேரவும்: Meshline://geohash/%1$@ — Meshline புதியவரா? %2$@ இல் பெற்று, பின்னர் இட சேனல்களில் #%1$@ என தட்டச்சு செய்யவும்."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "เข้าร่วมช่อง #%1$@ บน bitchat: bitchat://geohash/%1$@ — ใหม่กับ bitchat? ดาวน์โหลดที่ %2$@ แล้วพิมพ์ #%1$@ ในช่องตามตำแหน่ง"
+            "value" : "เข้าร่วมช่อง #%1$@ บน Meshline: Meshline://geohash/%1$@ — ใหม่กับ Meshline? ดาวน์โหลดที่ %2$@ แล้วพิมพ์ #%1$@ ในช่องตามตำแหน่ง"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat'te #%1$@ kanalına katıl: bitchat://geohash/%1$@ — bitchat'te yeni misin? %2$@ adresinden indir, sonra konum kanallarında #%1$@ yaz."
+            "value" : "Meshline'te #%1$@ kanalına katıl: Meshline://geohash/%1$@ — Meshline'te yeni misin? %2$@ adresinden indir, sonra konum kanallarında #%1$@ yaz."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "приєднуйся до каналу #%1$@ у bitchat: bitchat://geohash/%1$@ — вперше в bitchat? завантаж на %2$@, потім введи #%1$@ у каналах локації."
+            "value" : "приєднуйся до каналу #%1$@ у Meshline: Meshline://geohash/%1$@ — вперше в Meshline? завантаж на %2$@, потім введи #%1$@ у каналах локації."
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat پر #%1$@ چینل میں شامل ہوں: bitchat://geohash/%1$@ — bitchat نئے ہیں؟ %2$@ سے حاصل کریں، پھر لوکیشن چینلز میں #%1$@ ٹائپ کریں۔"
+            "value" : "Meshline پر #%1$@ چینل میں شامل ہوں: Meshline://geohash/%1$@ — Meshline نئے ہیں؟ %2$@ سے حاصل کریں، پھر لوکیشن چینلز میں #%1$@ ٹائپ کریں۔"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "tham gia kênh #%1$@ trên bitchat: bitchat://geohash/%1$@ — mới dùng bitchat? tải tại %2$@ rồi nhập #%1$@ trong kênh vị trí."
+            "value" : "tham gia kênh #%1$@ trên Meshline: Meshline://geohash/%1$@ — mới dùng Meshline? tải tại %2$@ rồi nhập #%1$@ trong kênh vị trí."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "加入 bitchat 上的 #%1$@ 频道：bitchat://geohash/%1$@ — 初次使用 bitchat？前往 %2$@ 获取，然后在位置频道中输入 #%1$@。"
+            "value" : "加入 Meshline 上的 #%1$@ 频道：Meshline://geohash/%1$@ — 初次使用 Meshline？前往 %2$@ 获取，然后在位置频道中输入 #%1$@。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "加入 bitchat 上的 #%1$@ 頻道：bitchat://geohash/%1$@ — 初次使用 bitchat？前往 %2$@ 取得，然後在位置頻道中輸入 #%1$@。"
+            "value" : "加入 Meshline 上的 #%1$@ 頻道：Meshline://geohash/%1$@ — 初次使用 Meshline？前往 %2$@ 取得，然後在位置頻道中輸入 #%1$@。"
           }
         }
       }
@@ -34366,19 +34366,19 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تغطي هذه القناة منطقة صغيرة. الدعوة عبر الرسائل أو imessage تظهر لمشغّل الشبكة والجهازين — وتكشف الاهتمام بذلك المكان، وليس فقط أن شخصًا يستخدم bitchat."
+            "value" : "تغطي هذه القناة منطقة صغيرة. الدعوة عبر الرسائل أو imessage تظهر لمشغّل الشبكة والجهازين — وتكشف الاهتمام بذلك المكان، وليس فقط أن شخصًا يستخدم Meshline."
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "এই চ্যানেলটি ছোট এলাকা জুড়ে। sms বা imessage-এ পাঠানো আমন্ত্রণ ক্যারিয়ার ও দুই হ্যান্ডসেটে দেখা যায় — এতে bitchat ব্যবহারের পাশাপাশি সেই জায়গায় আগ্রহও প্রকাশ পায়।"
+            "value" : "এই চ্যানেলটি ছোট এলাকা জুড়ে। sms বা imessage-এ পাঠানো আমন্ত্রণ ক্যারিয়ার ও দুই হ্যান্ডসেটে দেখা যায় — এতে Meshline ব্যবহারের পাশাপাশি সেই জায়গায় আগ্রহও প্রকাশ পায়।"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "dieser kanal deckt ein kleines gebiet ab. eine einladung per sms oder imessage ist für den netzanbieter und beide geräte sichtbar — sie verrät interesse an diesem ort, nicht nur dass jemand bitchat nutzt."
+            "value" : "dieser kanal deckt ein kleines gebiet ab. eine einladung per sms oder imessage ist für den netzanbieter und beide geräte sichtbar — sie verrät interesse an diesem ort, nicht nur dass jemand Meshline nutzt."
           }
         },
         "en" : {
@@ -34390,157 +34390,157 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "este canal cubre un área pequeña. una invitación enviada por sms o imessage es visible para el operador y ambos teléfonos — revela interés en ese lugar, no solo que alguien usa bitchat."
+            "value" : "este canal cubre un área pequeña. una invitación enviada por sms o imessage es visible para el operador y ambos teléfonos — revela interés en ese lugar, no solo que alguien usa Meshline."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "این کانال ناحیه کوچکی را پوشش می‌دهد. دعوت‌نامهٔ sms یا imessage برای اپراتور و هر دو دستگاه دیده می‌شود — علاقه به آن مکان را فاش می‌کند، نه فقط اینکه کسی از bitchat استفاده می‌کند."
+            "value" : "این کانال ناحیه کوچکی را پوشش می‌دهد. دعوت‌نامهٔ sms یا imessage برای اپراتور و هر دو دستگاه دیده می‌شود — علاقه به آن مکان را فاش می‌کند، نه فقط اینکه کسی از Meshline استفاده می‌کند."
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "maliit na lugar ang saklaw ng channel na ito. ang invite sa sms o imessage ay makikita ng carrier at ng parehong device — inilalantad nito ang interes sa lugar na iyon, hindi lang na may gumagamit ng bitchat."
+            "value" : "maliit na lugar ang saklaw ng channel na ito. ang invite sa sms o imessage ay makikita ng carrier at ng parehong device — inilalantad nito ang interes sa lugar na iyon, hindi lang na may gumagamit ng Meshline."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ce canal couvre une petite zone. une invitation envoyée par sms ou imessage est visible par l’opérateur et les deux appareils — elle révèle un intérêt pour ce lieu, pas seulement que quelqu’un utilise bitchat."
+            "value" : "ce canal couvre une petite zone. une invitation envoyée par sms ou imessage est visible par l’opérateur et les deux appareils — elle révèle un intérêt pour ce lieu, pas seulement que quelqu’un utilise Meshline."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "הערוץ הזה מכסה אזור קטן. הזמנה ב-sms או imessage גלויה לספק ולשני המכשירים — היא חושפת עניין במקום, לא רק שמישהו משתמש ב-bitchat."
+            "value" : "הערוץ הזה מכסה אזור קטן. הזמנה ב-sms או imessage גלויה לספק ולשני המכשירים — היא חושפת עניין במקום, לא רק שמישהו משתמש ב-Meshline."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "यह चैनल छोटे क्षेत्र को कवर करता है। sms या imessage से भेजा निमंत्रण कैरियर और दोनों हैंडसेट को दिखता है — इससे bitchat इस्तेमाल करने के अलावा उस जगह में रुचि भी ज़ाहिर होती है।"
+            "value" : "यह चैनल छोटे क्षेत्र को कवर करता है। sms या imessage से भेजा निमंत्रण कैरियर और दोनों हैंडसेट को दिखता है — इससे Meshline इस्तेमाल करने के अलावा उस जगह में रुचि भी ज़ाहिर होती है।"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "kanal ini mencakup area kecil. undangan lewat sms atau imessage terlihat oleh operator dan kedua perangkat — itu mengungkapkan minat pada tempat itu, bukan hanya bahwa seseorang memakai bitchat."
+            "value" : "kanal ini mencakup area kecil. undangan lewat sms atau imessage terlihat oleh operator dan kedua perangkat — itu mengungkapkan minat pada tempat itu, bukan hanya bahwa seseorang memakai Meshline."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "questo canale copre un’area piccola. un invito inviato via sms o imessage è visibile all’operatore e a entrambi i telefoni — rivela interesse per quel luogo, non solo che qualcuno usa bitchat."
+            "value" : "questo canale copre un’area piccola. un invito inviato via sms o imessage è visibile all’operatore e a entrambi i telefoni — rivela interesse per quel luogo, non solo che qualcuno usa Meshline."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "このチャンネルは狭い範囲をカバーします。smsやimessageで送った招待は通信事業者と双方の端末に見えます — bitchatを使っていることだけでなく、その場所への関心も伝わります。"
+            "value" : "このチャンネルは狭い範囲をカバーします。smsやimessageで送った招待は通信事業者と双方の端末に見えます — Meshlineを使っていることだけでなく、その場所への関心も伝わります。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "이 채널은 좁은 영역을 다룹니다. sms나 imessage로 보낸 초대는 통신사와 양쪽 기기에 보입니다 — bitchat을 쓴다는 사실뿐 아니라 그 장소에 대한 관심도 드러납니다."
+            "value" : "이 채널은 좁은 영역을 다룹니다. sms나 imessage로 보낸 초대는 통신사와 양쪽 기기에 보입니다 — Meshline을 쓴다는 사실뿐 아니라 그 장소에 대한 관심도 드러납니다."
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "saluran ini meliputi kawasan kecil. jemputan melalui sms atau imessage kelihatan kepada operator dan kedua-dua peranti — ia mendedahkan minat terhadap tempat itu, bukan hanya bahawa seseorang menggunakan bitchat."
+            "value" : "saluran ini meliputi kawasan kecil. jemputan melalui sms atau imessage kelihatan kepada operator dan kedua-dua peranti — ia mendedahkan minat terhadap tempat itu, bukan hanya bahawa seseorang menggunakan Meshline."
           }
         },
         "ne" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "यो च्यानल सानो क्षेत्र समेट्छ। sms वा imessage मार्फत पठाइएको निमन्त्रणा क्यारियर र दुवै ह्यान्डसेटमा देखिन्छ — यसले bitchat प्रयोग मात्र होइन, त्यो ठाउँप्रति चासो पनि खुलाउँछ।"
+            "value" : "यो च्यानल सानो क्षेत्र समेट्छ। sms वा imessage मार्फत पठाइएको निमन्त्रणा क्यारियर र दुवै ह्यान्डसेटमा देखिन्छ — यसले Meshline प्रयोग मात्र होइन, त्यो ठाउँप्रति चासो पनि खुलाउँछ।"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "dit kanaal dekt een klein gebied. een uitnodiging via sms of imessage is zichtbaar voor de provider en beide toestellen — het onthult interesse in die plek, niet alleen dat iemand bitchat gebruikt."
+            "value" : "dit kanaal dekt een klein gebied. een uitnodiging via sms of imessage is zichtbaar voor de provider en beide toestellen — het onthult interesse in die plek, niet alleen dat iemand Meshline gebruikt."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ten kanał obejmuje mały obszar. zaproszenie wysłane sms-em lub imessage jest widoczne dla operatora i obu telefonów — ujawnia zainteresowanie tym miejscem, nie tylko to, że ktoś używa bitchat."
+            "value" : "ten kanał obejmuje mały obszar. zaproszenie wysłane sms-em lub imessage jest widoczne dla operatora i obu telefonów — ujawnia zainteresowanie tym miejscem, nie tylko to, że ktoś używa Meshline."
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "este canal cobre uma área pequena. um convite enviado por sms ou imessage fica visível para a operadora e ambos os telemóveis — revela interesse nesse local, não só que alguém usa bitchat."
+            "value" : "este canal cobre uma área pequena. um convite enviado por sms ou imessage fica visível para a operadora e ambos os telemóveis — revela interesse nesse local, não só que alguém usa Meshline."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "este canal cobre uma área pequena. um convite enviado por sms ou imessage fica visível para a operadora e ambos os celulares — revela interesse naquele lugar, não só que alguém usa bitchat."
+            "value" : "este canal cobre uma área pequena. um convite enviado por sms ou imessage fica visível para a operadora e ambos os celulares — revela interesse naquele lugar, não só que alguém usa Meshline."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "этот канал покрывает небольшую область. приглашение по sms или imessage видно оператору и обоим устройствам — оно раскрывает интерес к этому месту, а не только то, что кто-то пользуется bitchat."
+            "value" : "этот канал покрывает небольшую область. приглашение по sms или imessage видно оператору и обоим устройствам — оно раскрывает интерес к этому месту, а не только то, что кто-то пользуется Meshline."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "denna kanal täcker ett litet område. en inbjudan via sms eller imessage syns för operatören och båda enheterna — den avslöjar intresse för platsen, inte bara att någon använder bitchat."
+            "value" : "denna kanal täcker ett litet område. en inbjudan via sms eller imessage syns för operatören och båda enheterna — den avslöjar intresse för platsen, inte bara att någon använder Meshline."
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "இந்த சேனல் சிறிய பகுதியை உள்ளடக்குகிறது. sms அல்லது imessage அழைப்பு கேரியருக்கும் இரு சாதனங்களுக்கும் தெரியும் — bitchat பயன்படுத்துவது மட்டுமல்ல, அந்த இடத்தில் ஆர்வமும் வெளிப்படும்."
+            "value" : "இந்த சேனல் சிறிய பகுதியை உள்ளடக்குகிறது. sms அல்லது imessage அழைப்பு கேரியருக்கும் இரு சாதனங்களுக்கும் தெரியும் — Meshline பயன்படுத்துவது மட்டுமல்ல, அந்த இடத்தில் ஆர்வமும் வெளிப்படும்."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ช่องนี้ครอบคลุมพื้นที่เล็ก คำเชิญทาง sms หรือ imessage เปิดเผยต่อผู้ให้บริการและทั้งสองเครื่อง — มันเผยความสนใจในสถานที่นั้น ไม่ใช่แค่การใช้ bitchat"
+            "value" : "ช่องนี้ครอบคลุมพื้นที่เล็ก คำเชิญทาง sms หรือ imessage เปิดเผยต่อผู้ให้บริการและทั้งสองเครื่อง — มันเผยความสนใจในสถานที่นั้น ไม่ใช่แค่การใช้ Meshline"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bu kanal küçük bir alanı kapsar. sms veya imessage ile gönderilen davet operatör ve her iki cihazda görünür — yalnızca birinin bitchat kullandığını değil, o yere ilgiyi de açığa çıkarır."
+            "value" : "bu kanal küçük bir alanı kapsar. sms veya imessage ile gönderilen davet operatör ve her iki cihazda görünür — yalnızca birinin Meshline kullandığını değil, o yere ilgiyi de açığa çıkarır."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "цей канал покриває невелику ділянку. запрошення через sms або imessage бачать оператор і обидва пристрої — воно розкриває інтерес до цього місця, а не лише те, що хтось користується bitchat."
+            "value" : "цей канал покриває невелику ділянку. запрошення через sms або imessage бачать оператор і обидва пристрої — воно розкриває інтерес до цього місця, а не лише те, що хтось користується Meshline."
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "یہ چینل چھوٹے علاقے کا احاطہ کرتا ہے۔ sms یا imessage پر بھیجی گئی دعوت کیریئر اور دونوں ہینڈسیٹس کو نظر آتی ہے — اس سے صرف bitchat کا استعمال نہیں بلکہ اس جگہ میں دلچسپی بھی ظاہر ہوتی ہے۔"
+            "value" : "یہ چینل چھوٹے علاقے کا احاطہ کرتا ہے۔ sms یا imessage پر بھیجی گئی دعوت کیریئر اور دونوں ہینڈسیٹس کو نظر آتی ہے — اس سے صرف Meshline کا استعمال نہیں بلکہ اس جگہ میں دلچسپی بھی ظاہر ہوتی ہے۔"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "kênh này phủ một khu vực nhỏ. lời mời gửi qua sms hoặc imessage hiện với nhà mạng và cả hai máy — nó tiết lộ sự quan tâm đến nơi đó, không chỉ việc ai đó dùng bitchat."
+            "value" : "kênh này phủ một khu vực nhỏ. lời mời gửi qua sms hoặc imessage hiện với nhà mạng và cả hai máy — nó tiết lộ sự quan tâm đến nơi đó, không chỉ việc ai đó dùng Meshline."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "此频道覆盖范围很小。通过短信或 iMessage 发送的邀请对运营商和双方设备可见——它会暴露对该地点的兴趣，而不仅是有人在使用 bitchat。"
+            "value" : "此频道覆盖范围很小。通过短信或 iMessage 发送的邀请对运营商和双方设备可见——它会暴露对该地点的兴趣，而不仅是有人在使用 Meshline。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "此頻道覆蓋範圍很小。透過簡訊或 iMessage 傳送的邀請對電信商與雙方裝置可見——它會揭露對該地點的興趣，而不只是有人在使用 bitchat。"
+            "value" : "此頻道覆蓋範圍很小。透過簡訊或 iMessage 傳送的邀請對電信商與雙方裝置可見——它會揭露對該地點的興趣，而不只是有人在使用 Meshline。"
           }
         }
       }
@@ -45521,19 +45521,19 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth متوقف. فعّل bluetooth في الإعدادات لاستخدام bitchat."
+            "value" : "bluetooth متوقف. فعّل bluetooth في الإعدادات لاستخدام Meshline."
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ব্লুটুথ বন্ধ আছে। bitchat ব্যবহার করতে সেটিংসে ব্লুটুথ চালু করুন।"
+            "value" : "ব্লুটুথ বন্ধ আছে। Meshline ব্যবহার করতে সেটিংসে ব্লুটুথ চালু করুন।"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth ist ausgeschaltet. aktiviere bluetooth in den einstellungen, um bitchat zu verwenden."
+            "value" : "bluetooth ist ausgeschaltet. aktiviere bluetooth in den einstellungen, um Meshline zu verwenden."
           }
         },
         "en" : {
@@ -45545,157 +45545,157 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth está desactivado. Actívalo en Ajustes para usar BitChat."
+            "value" : "bluetooth está desactivado. Actívalo en Ajustes para usar Meshline."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "بلوتوث خاموش است. برای استفاده از bitchat لطفاً بلوتوث را در تنظیمات روشن کنید."
+            "value" : "بلوتوث خاموش است. برای استفاده از Meshline لطفاً بلوتوث را در تنظیمات روشن کنید."
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "naka-off ang bluetooth. pakibuksan sa settings para magamit ang bitchat."
+            "value" : "naka-off ang bluetooth. pakibuksan sa settings para magamit ang Meshline."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth est désactivé. active le bluetooth dans réglages pour utiliser bitchat."
+            "value" : "bluetooth est désactivé. active le bluetooth dans réglages pour utiliser Meshline."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth כבוי. הפעל bluetooth בהגדרות כדי להשתמש ב-bitchat."
+            "value" : "bluetooth כבוי. הפעל bluetooth בהגדרות כדי להשתמש ב-Meshline."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ब्लूटूथ बंद है। bitchat उपयोग करने के लिए सेटिंग्स में ब्लूटूथ चालू करें।"
+            "value" : "ब्लूटूथ बंद है। Meshline उपयोग करने के लिए सेटिंग्स में ब्लूटूथ चालू करें।"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth dimatikan. aktifkan bluetooth di pengaturan untuk memakai bitchat."
+            "value" : "bluetooth dimatikan. aktifkan bluetooth di pengaturan untuk memakai Meshline."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth è disattivato. attiva bluetooth nelle impostazioni per usare bitchat."
+            "value" : "bluetooth è disattivato. attiva bluetooth nelle impostazioni per usare Meshline."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetoothがオフです。設定でbluetoothをオンにしてbitchatを使ってください。"
+            "value" : "bluetoothがオフです。設定でbluetoothをオンにしてMeshlineを使ってください。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth가 꺼져 있습니다. bitchat을 사용하려면 설정에서 bluetooth를 켜주세요."
+            "value" : "bluetooth가 꺼져 있습니다. Meshline을 사용하려면 설정에서 bluetooth를 켜주세요."
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bluetooth dimatikan. Hidupkan Bluetooth dalam Tetapan untuk menggunakan bitchat."
+            "value" : "Bluetooth dimatikan. Hidupkan Bluetooth dalam Tetapan untuk menggunakan Meshline."
           }
         },
         "ne" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth बन्द छ। bitchat प्रयोग गर्न bluetooth सेटिङमा अन गर।"
+            "value" : "bluetooth बन्द छ। Meshline प्रयोग गर्न bluetooth सेटिङमा अन गर।"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth staat uit. zet bluetooth aan in instellingen om bitchat te gebruiken."
+            "value" : "bluetooth staat uit. zet bluetooth aan in instellingen om Meshline te gebruiken."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth jest wyłączony. włącz bluetooth w ustawieniach, aby używać bitchat."
+            "value" : "bluetooth jest wyłączony. włącz bluetooth w ustawieniach, aby używać Meshline."
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O Bluetooth está desligado. Ativa o Bluetooth em Definições para usar o bitchat."
+            "value" : "O Bluetooth está desligado. Ativa o Bluetooth em Definições para usar o Meshline."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth está desligado. ative o bluetooth em ajustes para usar bitchat."
+            "value" : "bluetooth está desligado. ative o bluetooth em ajustes para usar Meshline."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth выключен. включи bluetooth в настройках, чтобы использовать bitchat."
+            "value" : "bluetooth выключен. включи bluetooth в настройках, чтобы использовать Meshline."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth är avstängt. slå på bluetooth i inställningar för att använda bitchat."
+            "value" : "bluetooth är avstängt. slå på bluetooth i inställningar för att använda Meshline."
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bluetooth அணைக்கப்பட்டுள்ளது. bitchat பயன்படுத்த அமைப்பில் Bluetooth ஐ இயக்கவும்."
+            "value" : "Bluetooth அணைக்கப்பட்டுள்ளது. Meshline பயன்படுத்த அமைப்பில் Bluetooth ஐ இயக்கவும்."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ปิด Bluetooth อยู่ กรุณาเปิดในตั้งค่าเพื่อใช้ bitchat"
+            "value" : "ปิด Bluetooth อยู่ กรุณาเปิดในตั้งค่าเพื่อใช้ Meshline"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bluetooth kapalı. bitchat'i kullanmak için ayarlardan Bluetooth'u açın."
+            "value" : "Bluetooth kapalı. Meshline'i kullanmak için ayarlardan Bluetooth'u açın."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth вимкнений. увімкни bluetooth у налаштуваннях, щоб користуватися bitchat."
+            "value" : "bluetooth вимкнений. увімкни bluetooth у налаштуваннях, щоб користуватися Meshline."
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bluetooth بند ہے۔ bitchat استعمال کرنے کیلئے سیٹنگز میں Bluetooth آن کریں۔"
+            "value" : "Bluetooth بند ہے۔ Meshline استعمال کرنے کیلئے سیٹنگز میں Bluetooth آن کریں۔"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth đang tắt. hãy bật trong cài đặt để dùng bitchat."
+            "value" : "bluetooth đang tắt. hãy bật trong cài đặt để dùng Meshline."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth 已关闭。请在设置中开启以使用 bitchat。"
+            "value" : "bluetooth 已关闭。请在设置中开启以使用 Meshline。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bluetooth 已關閉。請在設定中開啟以使用 bitchat。"
+            "value" : "bluetooth 已關閉。請在設定中開啟以使用 Meshline。"
           }
         }
       }
@@ -45706,19 +45706,19 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تحتاج bitchat إلى إذن bluetooth للاتصال بالأجهزة القريبة. فعّل الوصول في الإعدادات."
+            "value" : "تحتاج Meshline إلى إذن bluetooth للاتصال بالأجهزة القريبة. فعّل الوصول في الإعدادات."
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "নিকটবর্তী ডিভাইসের সাথে যুক্ত হতে bitchat-এর ব্লুটুথ অনুমতি দরকার। দয়া করে সেটিংসে ব্লুটুথ অ্যাক্সেস সক্রিয় করুন।"
+            "value" : "নিকটবর্তী ডিভাইসের সাথে যুক্ত হতে Meshline-এর ব্লুটুথ অনুমতি দরকার। দয়া করে সেটিংসে ব্লুটুথ অ্যাক্সেস সক্রিয় করুন।"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat benötigt bluetooth-berechtigung, um sich mit geräten in der nähe zu verbinden. erlaube den zugriff in den einstellungen."
+            "value" : "Meshline benötigt bluetooth-berechtigung, um sich mit geräten in der nähe zu verbinden. erlaube den zugriff in den einstellungen."
           }
         },
         "en" : {
@@ -45730,157 +45730,157 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitChat necesita permiso de Bluetooth para conectarse con dispositivos cercanos. Habilita el acceso en Ajustes."
+            "value" : "Meshline necesita permiso de Bluetooth para conectarse con dispositivos cercanos. Habilita el acceso en Ajustes."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat برای اتصال به دستگاه‌های اطراف به مجوز بلوتوث نیاز دارد. لطفاً دسترسی بلوتوث را در تنظیمات فعال کنید."
+            "value" : "Meshline برای اتصال به دستگاه‌های اطراف به مجوز بلوتوث نیاز دارد. لطفاً دسترسی بلوتوث را در تنظیمات فعال کنید."
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "kailangan ng bitchat ng pahintulot sa bluetooth upang kumonekta sa mga kalapit na device. pakiactivate sa settings."
+            "value" : "kailangan ng Meshline ng pahintulot sa bluetooth upang kumonekta sa mga kalapit na device. pakiactivate sa settings."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat a besoin de l'autorisation bluetooth pour se connecter aux appareils proches. active l'accès dans réglages."
+            "value" : "Meshline a besoin de l'autorisation bluetooth pour se connecter aux appareils proches. active l'accès dans réglages."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat צריכה הרשאת bluetooth כדי להתחבר למכשירים קרובים. אפשר גישה בהגדרות."
+            "value" : "Meshline צריכה הרשאת bluetooth כדי להתחבר למכשירים קרובים. אפשר גישה בהגדרות."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat को पास के उपकरणों से जुड़ने के लिए ब्लूटूथ अनुमति चाहिए। कृपया सेटिंग्स में ब्लूटूथ एक्सेस सक्षम करें।"
+            "value" : "Meshline को पास के उपकरणों से जुड़ने के लिए ब्लूटूथ अनुमति चाहिए। कृपया सेटिंग्स में ब्लूटूथ एक्सेस सक्षम करें।"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat memerlukan izin bluetooth untuk terhubung dengan perangkat dekat. aktifkan akses di pengaturan."
+            "value" : "Meshline memerlukan izin bluetooth untuk terhubung dengan perangkat dekat. aktifkan akses di pengaturan."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat richiede l'autorizzazione bluetooth per collegarsi ai dispositivi vicini. abilita l'accesso nelle impostazioni."
+            "value" : "Meshline richiede l'autorizzazione bluetooth per collegarsi ai dispositivi vicini. abilita l'accesso nelle impostazioni."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchatは近くのデバイスと接続するためbluetooth権限が必要です。設定でアクセスを有効にしてください。"
+            "value" : "Meshlineは近くのデバイスと接続するためbluetooth権限が必要です。設定でアクセスを有効にしてください。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat은 주변 기기와 연결하기 위해 bluetooth 권한이 필요합니다. 설정에서 bluetooth 접근을 활성화해주세요."
+            "value" : "Meshline은 주변 기기와 연결하기 위해 bluetooth 권한이 필요합니다. 설정에서 bluetooth 접근을 활성화해주세요."
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat memerlukan kebenaran Bluetooth untuk disambungkan kepada peranti berhampiran. Benarkan capaian dalam Tetapan."
+            "value" : "Meshline memerlukan kebenaran Bluetooth untuk disambungkan kepada peranti berhampiran. Benarkan capaian dalam Tetapan."
           }
         },
         "ne" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat लाई नजिकका उपकरणसँग जडान हुन bluetooth अनुमति चाहिन्छ। सेटिङमा पहुँच सक्षम गर।"
+            "value" : "Meshline लाई नजिकका उपकरणसँग जडान हुन bluetooth अनुमति चाहिन्छ। सेटिङमा पहुँच सक्षम गर।"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat heeft bluetooth-toegang nodig om verbinding te maken met apparaten in de buurt. schakel dit in bij instellingen."
+            "value" : "Meshline heeft bluetooth-toegang nodig om verbinding te maken met apparaten in de buurt. schakel dit in bij instellingen."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat potrzebuje uprawnień bluetooth, aby łączyć się z pobliskimi urządzeniami. włącz dostęp w ustawieniach."
+            "value" : "Meshline potrzebuje uprawnień bluetooth, aby łączyć się z pobliskimi urządzeniami. włącz dostęp w ustawieniach."
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O bitchat precisa de autorização de Bluetooth para se ligar a dispositivos próximos. Ativa o acesso em Definições."
+            "value" : "O Meshline precisa de autorização de Bluetooth para se ligar a dispositivos próximos. Ativa o acesso em Definições."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat precisa de permissão de bluetooth para conectar com dispositivos próximos. habilite o acesso em ajustes."
+            "value" : "Meshline precisa de permissão de bluetooth para conectar com dispositivos próximos. habilite o acesso em ajustes."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat нужен доступ к bluetooth, чтобы соединяться с ближайшими устройствами. включи разрешение в настройках."
+            "value" : "Meshline нужен доступ к bluetooth, чтобы соединяться с ближайшими устройствами. включи разрешение в настройках."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat behöver bluetooth-behörighet för att ansluta till enheter i närheten. aktivera åtkomst i inställningar."
+            "value" : "Meshline behöver bluetooth-behörighet för att ansluta till enheter i närheten. aktivera åtkomst i inställningar."
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "அருகிலுள்ள சாதனங்களை இணைக்க bitchat க்கு Bluetooth அனுமதி தேவை. அமைப்பில் அனுமதி வழங்கவும்."
+            "value" : "அருகிலுள்ள சாதனங்களை இணைக்க Meshline க்கு Bluetooth அனுமதி தேவை. அமைப்பில் அனுமதி வழங்கவும்."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat ต้องการสิทธิ์ Bluetooth เพื่อเชื่อมต่อกับอุปกรณ์ใกล้เคียง กรุณาเปิดสิทธิ์ในตั้งค่า"
+            "value" : "Meshline ต้องการสิทธิ์ Bluetooth เพื่อเชื่อมต่อกับอุปกรณ์ใกล้เคียง กรุณาเปิดสิทธิ์ในตั้งค่า"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat'in yakın cihazlara bağlanması için Bluetooth izni gerekir. lütfen ayarlardan Bluetooth erişimini etkinleştirin."
+            "value" : "Meshline'in yakın cihazlara bağlanması için Bluetooth izni gerekir. lütfen ayarlardan Bluetooth erişimini etkinleştirin."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat потребує дозволу bluetooth для з'єднання з пристроями поруч. ввімкни доступ у налаштуваннях."
+            "value" : "Meshline потребує дозволу bluetooth для з'єднання з пристроями поруч. ввімкни доступ у налаштуваннях."
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "قریب کے آلات سے جڑنے کیلئے bitchat کو Bluetooth اجازت درکار ہے۔ سیٹنگز میں رسائی فعال کریں۔"
+            "value" : "قریب کے آلات سے جڑنے کیلئے Meshline کو Bluetooth اجازت درکار ہے۔ سیٹنگز میں رسائی فعال کریں۔"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat cần quyền bluetooth để kết nối thiết bị gần. hãy bật quyền trong cài đặt."
+            "value" : "Meshline cần quyền bluetooth để kết nối thiết bị gần. hãy bật quyền trong cài đặt."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat 需要 bluetooth 权限以连接附近设备。请在设置中启用访问。"
+            "value" : "Meshline 需要 bluetooth 权限以连接附近设备。请在设置中启用访问。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat 需要 bluetooth 權限以連線至附近裝置。請在設定中啟用存取權限。"
+            "value" : "Meshline 需要 bluetooth 權限以連線至附近裝置。請在設定中啟用存取權限。"
           }
         }
       }
@@ -46261,19 +46261,19 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "هذا الجهاز لا يدعم bluetooth. يحتاج bitchat إلى bluetooth للعمل."
+            "value" : "هذا الجهاز لا يدعم bluetooth. يحتاج Meshline إلى bluetooth للعمل."
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "এই ডিভাইস ব্লুটুথ সমর্থন করে না। bitchat চালাতে ব্লুটুথ দরকার।"
+            "value" : "এই ডিভাইস ব্লুটুথ সমর্থন করে না। Meshline চালাতে ব্লুটুথ দরকার।"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "dieses gerät unterstützt kein bluetooth. bitchat benötigt bluetooth zum funktionieren."
+            "value" : "dieses gerät unterstützt kein bluetooth. Meshline benötigt bluetooth zum funktionieren."
           }
         },
         "en" : {
@@ -46285,157 +46285,157 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "este dispositivo no admite Bluetooth. BitChat necesita Bluetooth para funcionar."
+            "value" : "este dispositivo no admite Bluetooth. Meshline necesita Bluetooth para funcionar."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "این دستگاه از بلوتوث پشتیبانی نمی‌کند. bitchat برای کار کردن به بلوتوث نیاز دارد."
+            "value" : "این دستگاه از بلوتوث پشتیبانی نمی‌کند. Meshline برای کار کردن به بلوتوث نیاز دارد."
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "hindi sinusuportahan ng device na ito ang bluetooth. kailangan ito ng bitchat para gumana."
+            "value" : "hindi sinusuportahan ng device na ito ang bluetooth. kailangan ito ng Meshline para gumana."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "cet appareil ne prend pas en charge le bluetooth. bitchat en a besoin pour fonctionner."
+            "value" : "cet appareil ne prend pas en charge le bluetooth. Meshline en a besoin pour fonctionner."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "המכשיר הזה לא תומך ב-bluetooth. bitchat זקוקה ל-bluetooth כדי לעבוד."
+            "value" : "המכשיר הזה לא תומך ב-bluetooth. Meshline זקוקה ל-bluetooth כדי לעבוד."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "यह डिवाइस ब्लूटूथ समर्थित नहीं है। bitchat चलाने के लिए ब्लूटूथ जरूरी है।"
+            "value" : "यह डिवाइस ब्लूटूथ समर्थित नहीं है। Meshline चलाने के लिए ब्लूटूथ जरूरी है।"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "perangkat ini tidak mendukung bluetooth. bitchat memerlukan bluetooth untuk berjalan."
+            "value" : "perangkat ini tidak mendukung bluetooth. Meshline memerlukan bluetooth untuk berjalan."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "questo dispositivo non supporta bluetooth. bitchat richiede bluetooth per funzionare."
+            "value" : "questo dispositivo non supporta bluetooth. Meshline richiede bluetooth per funzionare."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "このデバイスはbluetoothをサポートしていません。bitchatにはbluetoothが必要です。"
+            "value" : "このデバイスはbluetoothをサポートしていません。Meshlineにはbluetoothが必要です。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "이 기기는 bluetooth를 지원하지 않습니다. bitchat이 작동하려면 bluetooth가 필요합니다."
+            "value" : "이 기기는 bluetooth를 지원하지 않습니다. Meshline이 작동하려면 bluetooth가 필요합니다."
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Peranti ini tidak menyokong Bluetooth. bitchat memerlukan Bluetooth untuk berfungsi."
+            "value" : "Peranti ini tidak menyokong Bluetooth. Meshline memerlukan Bluetooth untuk berfungsi."
           }
         },
         "ne" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "यो उपकरणले bluetooth समर्थन गर्दैन। bitchat चलाउन bluetooth चाहिन्छ।"
+            "value" : "यो उपकरणले bluetooth समर्थन गर्दैन। Meshline चलाउन bluetooth चाहिन्छ।"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "dit apparaat ondersteunt geen bluetooth. bitchat heeft bluetooth nodig om te werken."
+            "value" : "dit apparaat ondersteunt geen bluetooth. Meshline heeft bluetooth nodig om te werken."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "to urządzenie nie obsługuje bluetooth. bitchat wymaga bluetooth do działania."
+            "value" : "to urządzenie nie obsługuje bluetooth. Meshline wymaga bluetooth do działania."
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Este dispositivo não suporta Bluetooth. O bitchat precisa de Bluetooth para funcionar."
+            "value" : "Este dispositivo não suporta Bluetooth. O Meshline precisa de Bluetooth para funcionar."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "este dispositivo não suporta bluetooth. bitchat precisa de bluetooth para funcionar."
+            "value" : "este dispositivo não suporta bluetooth. Meshline precisa de bluetooth para funcionar."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "это устройство не поддерживает bluetooth. bitchat нужен bluetooth для работы."
+            "value" : "это устройство не поддерживает bluetooth. Meshline нужен bluetooth для работы."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "denna enhet stöder inte bluetooth. bitchat behöver bluetooth för att fungera."
+            "value" : "denna enhet stöder inte bluetooth. Meshline behöver bluetooth för att fungera."
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "இந்த சாதனம் Bluetooth ஐ ஆதரிக்காது. bitchat இயங்க Bluetooth தேவை."
+            "value" : "இந்த சாதனம் Bluetooth ஐ ஆதரிக்காது. Meshline இயங்க Bluetooth தேவை."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "อุปกรณ์นี้ไม่รองรับ Bluetooth การใช้งาน bitchat ต้องใช้ Bluetooth"
+            "value" : "อุปกรณ์นี้ไม่รองรับ Bluetooth การใช้งาน Meshline ต้องใช้ Bluetooth"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bu cihaz Bluetooth'u desteklemiyor. bitchat'in çalışması için Bluetooth gerekli."
+            "value" : "bu cihaz Bluetooth'u desteklemiyor. Meshline'in çalışması için Bluetooth gerekli."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "цей пристрій не підтримує bluetooth. bitchat потрібен bluetooth для роботи."
+            "value" : "цей пристрій не підтримує bluetooth. Meshline потрібен bluetooth для роботи."
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "یہ ڈیوائس Bluetooth کو سپورٹ نہیں کرتی۔ bitchat کو چلنے کیلئے Bluetooth چاہیے۔"
+            "value" : "یہ ڈیوائس Bluetooth کو سپورٹ نہیں کرتی۔ Meshline کو چلنے کیلئے Bluetooth چاہیے۔"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "thiết bị này không hỗ trợ bluetooth. bitchat cần bluetooth để hoạt động."
+            "value" : "thiết bị này không hỗ trợ bluetooth. Meshline cần bluetooth để hoạt động."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "此设备不支持 bluetooth。bitchat 需要 bluetooth 才能运行。"
+            "value" : "此设备不支持 bluetooth。Meshline 需要 bluetooth 才能运行。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "此裝置不支持 bluetooth。bitchat 需要 bluetooth 才能運行。"
+            "value" : "此裝置不支持 bluetooth。Meshline 需要 bluetooth 才能運行。"
           }
         }
       }
@@ -84240,19 +84240,19 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "افتح bitchat للقراءة"
+            "value" : "افتح Meshline للقراءة"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "পড়তে bitchat খুলুন"
+            "value" : "পড়তে Meshline খুলুন"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "öffne bitchat zum lesen"
+            "value" : "öffne Meshline zum lesen"
           }
         },
         "en" : {
@@ -84264,157 +84264,157 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "abre bitchat para leer"
+            "value" : "abre Meshline para leer"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "برای خواندن bitchat را باز کن"
+            "value" : "برای خواندن Meshline را باز کن"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "buksan ang bitchat para makita"
+            "value" : "buksan ang Meshline para makita"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ouvre bitchat pour lire"
+            "value" : "ouvre Meshline pour lire"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "פתח את bitchat כדי לקרוא"
+            "value" : "פתח את Meshline כדי לקרוא"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "पढ़ने के लिए bitchat खोलें"
+            "value" : "पढ़ने के लिए Meshline खोलें"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "buka bitchat untuk membaca"
+            "value" : "buka Meshline untuk membaca"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "apri bitchat per leggere"
+            "value" : "apri Meshline per leggere"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "読むには bitchat を開いてください"
+            "value" : "読むには Meshline を開いてください"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "읽으려면 bitchat을 열어보세요"
+            "value" : "읽으려면 Meshline을 열어보세요"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "buka bitchat untuk membaca"
+            "value" : "buka Meshline untuk membaca"
           }
         },
         "ne" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "पढ्न bitchat खोल"
+            "value" : "पढ्न Meshline खोल"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "open bitchat om te lezen"
+            "value" : "open Meshline om te lezen"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "otwórz bitchat, aby przeczytać"
+            "value" : "otwórz Meshline, aby przeczytać"
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "abre o bitchat para ler"
+            "value" : "abre o Meshline para ler"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "abra o bitchat para ler"
+            "value" : "abra o Meshline para ler"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "открой bitchat, чтобы прочитать"
+            "value" : "открой Meshline, чтобы прочитать"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "öppna bitchat för att läsa"
+            "value" : "öppna Meshline för att läsa"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "படிக்க bitchat ஐத் திறக்கவும்"
+            "value" : "படிக்க Meshline ஐத் திறக்கவும்"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "เปิด bitchat เพื่ออ่าน"
+            "value" : "เปิด Meshline เพื่ออ่าน"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "okumak için bitchat'i aç"
+            "value" : "okumak için Meshline'i aç"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "відкрий bitchat, щоб прочитати"
+            "value" : "відкрий Meshline, щоб прочитати"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "پڑھنے کے لیے bitchat کھولیں"
+            "value" : "پڑھنے کے لیے Meshline کھولیں"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "mở bitchat để đọc"
+            "value" : "mở Meshline để đọc"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "打开 bitchat 查看"
+            "value" : "打开 Meshline 查看"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "開啟 bitchat 查看"
+            "value" : "開啟 Meshline 查看"
           }
         }
       }
@@ -97579,19 +97579,19 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "أعد تشغيل bitchat لتطبيق اللغة الجديدة"
+            "value" : "أعد تشغيل Meshline لتطبيق اللغة الجديدة"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "নতুন ভাষা প্রয়োগ করতে bitchat পুনরায় চালু করুন"
+            "value" : "নতুন ভাষা প্রয়োগ করতে Meshline পুনরায় চালু করুন"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bitchat neu starten, um die neue Sprache zu übernehmen"
+            "value" : "Meshline neu starten, um die neue Sprache zu übernehmen"
           }
         },
         "en" : {
@@ -97603,157 +97603,157 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "reinicia bitchat para aplicar el nuevo idioma"
+            "value" : "reinicia Meshline para aplicar el nuevo idioma"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "برای اعمال زبان جدید، bitchat را دوباره باز کنید"
+            "value" : "برای اعمال زبان جدید، Meshline را دوباره باز کنید"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "i-restart ang bitchat para mailapat ang bagong wika"
+            "value" : "i-restart ang Meshline para mailapat ang bagong wika"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "redémarrez bitchat pour appliquer la nouvelle langue"
+            "value" : "redémarrez Meshline pour appliquer la nouvelle langue"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "יש להפעיל מחדש את bitchat כדי להחיל את השפה החדשה"
+            "value" : "יש להפעיל מחדש את Meshline כדי להחיל את השפה החדשה"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "नई भाषा लागू करने के लिए bitchat पुनः आरंभ करें"
+            "value" : "नई भाषा लागू करने के लिए Meshline पुनः आरंभ करें"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "mulai ulang bitchat untuk menerapkan bahasa baru"
+            "value" : "mulai ulang Meshline untuk menerapkan bahasa baru"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "riavvia bitchat per applicare la nuova lingua"
+            "value" : "riavvia Meshline per applicare la nuova lingua"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "新しい言語を適用するには bitchat を再起動してください"
+            "value" : "新しい言語を適用するには Meshline を再起動してください"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "새 언어를 적용하려면 bitchat을 다시 시작하세요"
+            "value" : "새 언어를 적용하려면 Meshline을 다시 시작하세요"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "mulakan semula bitchat untuk menggunakan bahasa baharu"
+            "value" : "mulakan semula Meshline untuk menggunakan bahasa baharu"
           }
         },
         "ne" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "नयाँ भाषा लागू गर्न bitchat पुनः सुरु गर्नुहोस्"
+            "value" : "नयाँ भाषा लागू गर्न Meshline पुनः सुरु गर्नुहोस्"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "herstart bitchat om de nieuwe taal toe te passen"
+            "value" : "herstart Meshline om de nieuwe taal toe te passen"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "uruchom bitchat ponownie, aby zastosować nowy język"
+            "value" : "uruchom Meshline ponownie, aby zastosować nowy język"
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "reinicie o bitchat para aplicar o novo idioma"
+            "value" : "reinicie o Meshline para aplicar o novo idioma"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "reinicie o bitchat para aplicar o novo idioma"
+            "value" : "reinicie o Meshline para aplicar o novo idioma"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "перезапустите bitchat, чтобы применить новый язык"
+            "value" : "перезапустите Meshline, чтобы применить новый язык"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "starta om bitchat för att använda det nya språket"
+            "value" : "starta om Meshline för att använda det nya språket"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "புதிய மொழியைப் பயன்படுத்த bitchat-ஐ மீண்டும் தொடங்கவும்"
+            "value" : "புதிய மொழியைப் பயன்படுத்த Meshline-ஐ மீண்டும் தொடங்கவும்"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "รีสตาร์ท bitchat เพื่อใช้ภาษาใหม่"
+            "value" : "รีสตาร์ท Meshline เพื่อใช้ภาษาใหม่"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "yeni dili uygulamak için bitchat'i yeniden başlatın"
+            "value" : "yeni dili uygulamak için Meshline'i yeniden başlatın"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "перезапустіть bitchat, щоб застосувати нову мову"
+            "value" : "перезапустіть Meshline, щоб застосувати нову мову"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "نئی زبان لاگو کرنے کے لیے bitchat دوبارہ شروع کریں"
+            "value" : "نئی زبان لاگو کرنے کے لیے Meshline دوبارہ شروع کریں"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "khởi động lại bitchat để áp dụng ngôn ngữ mới"
+            "value" : "khởi động lại Meshline để áp dụng ngôn ngữ mới"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "重启 bitchat 以应用新语言"
+            "value" : "重启 Meshline 以应用新语言"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "重新啟動 bitchat 以套用新語言"
+            "value" : "重新啟動 Meshline 以套用新語言"
           }
         }
       }

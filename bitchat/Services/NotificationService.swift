@@ -109,7 +109,7 @@ final class NotificationService {
             String(localized: "notification.redacted.geohash.title", defaultValue: "📍 new activity nearby", comment: "Lock-screen notification title for activity in a location channel when message previews are hidden; deliberately omits the geohash")
         }
         static var body: String {
-            String(localized: "notification.redacted.body", defaultValue: "open bitchat to read", comment: "Lock-screen notification body shown in place of the message text when message previews are hidden")
+            String(localized: "notification.redacted.body", defaultValue: "open Meshline to read", comment: "Lock-screen notification body shown in place of the message text when message previews are hidden")
         }
     }
 
@@ -260,7 +260,7 @@ final class NotificationService {
     }
 
     func sendNetworkAvailableNotification(peerCount: Int) {
-        let title = String(localized: "notification.nearby.title", defaultValue: "👥 bitchatters nearby!", comment: "Title of the local notification when mesh peers come into range")
+        let title = String(localized: "notification.nearby.title", defaultValue: "👥 Meshline users nearby!", comment: "Title of the local notification when mesh peers come into range")
         let body = peerCount == 1
             ? String(localized: "notification.nearby.body_one", defaultValue: "1 person around", comment: "Body of the nearby notification for exactly one peer")
             : String(format: String(localized: "notification.nearby.body_many", defaultValue: "%lld people around", comment: "Body of the nearby notification; placeholder is the peer count"), locale: .current, peerCount)

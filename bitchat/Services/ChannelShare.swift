@@ -32,7 +32,7 @@ enum ChannelShare {
         return String(
             format: String(
                 localized: "channel.share.payload",
-                defaultValue: "join the #%1$@ channel on bitchat: bitchat://geohash/%1$@ — new to bitchat? get it at %2$@ then type #%1$@ under location channels.",
+                defaultValue: "join the #%1$@ channel on Meshline: Meshline://geohash/%1$@ — new to Meshline? get it at %2$@ then type #%1$@ under location channels.",
                 comment: "Plain-text share payload for a location channel; %1$@ is the geohash, %2$@ is the App Store URL"
             ),
             locale: .current,
