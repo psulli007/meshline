@@ -675,6 +675,7 @@ private extension ChatViewModelBootstrapper {
     func requestNotifications() {
         #if DEBUG
         if ScreenshotDemo.isActive { return }
+        if ProcessInfo.processInfo.arguments.contains("-MeshlineNoNotificationPrompt") { return }
         #endif
         // Ask after the ~1.6 s launch splash so the system prompt does not
         // cover it. Nothing else waits on this.
