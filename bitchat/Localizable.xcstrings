@@ -33994,181 +33994,181 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "انضم إلى قناة #%1$@ على Meshline: Meshline://geohash/%1$@ — جديد على Meshline؟ حمّله من %2$@ ثم اكتب #%1$@ ضمن قنوات الموقع."
+            "value" : "انضم إلى قناة #%1$@ على Meshline: bitchat://geohash/%1$@ — جديد على Meshline؟ حمّله من %2$@ ثم اكتب #%1$@ ضمن قنوات الموقع."
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Meshline-এ #%1$@ চ্যানেলে যোগ দিন: Meshline://geohash/%1$@ — Meshline-এ নতুন? %2$@ থেকে নিন, তারপর লোকেশন চ্যানেলে #%1$@ টাইপ করুন।"
+            "value" : "Meshline-এ #%1$@ চ্যানেলে যোগ দিন: bitchat://geohash/%1$@ — Meshline-এ নতুন? %2$@ থেকে নিন, তারপর লোকেশন চ্যানেলে #%1$@ টাইপ করুন।"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "tritt dem #%1$@-kanal auf Meshline bei: Meshline://geohash/%1$@ — neu bei Meshline? hole es unter %2$@ und tippe dann #%1$@ unter standort-kanäle."
+            "value" : "tritt dem #%1$@-kanal auf Meshline bei: bitchat://geohash/%1$@ — neu bei Meshline? hole es unter %2$@ und tippe dann #%1$@ unter standort-kanäle."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "join the #%1$@ channel on Meshline: Meshline://geohash/%1$@ — new to Meshline? get it at %2$@ then type #%1$@ under location channels."
+            "value" : "join the #%1$@ channel on Meshline: bitchat://geohash/%1$@ — new to Meshline? get it at %2$@ then type #%1$@ under location channels."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "únete al canal #%1$@ en Meshline: Meshline://geohash/%1$@ — ¿nuevo en Meshline? consíguelo en %2$@ y luego escribe #%1$@ en canales de ubicación."
+            "value" : "únete al canal #%1$@ en Meshline: bitchat://geohash/%1$@ — ¿nuevo en Meshline? consíguelo en %2$@ y luego escribe #%1$@ en canales de ubicación."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "به کانال #%1$@ در Meshline بپیوندید: Meshline://geohash/%1$@ — تازه‌واردید؟ از %2$@ بگیرید و سپس #%1$@ را در کانال‌های موقعیت وارد کنید."
+            "value" : "به کانال #%1$@ در Meshline بپیوندید: bitchat://geohash/%1$@ — تازه‌واردید؟ از %2$@ بگیرید و سپس #%1$@ را در کانال‌های موقعیت وارد کنید."
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "sumali sa #%1$@ channel sa Meshline: Meshline://geohash/%1$@ — bago sa Meshline? kunin ito sa %2$@ tapos i-type ang #%1$@ sa mga channel ng lokasyon."
+            "value" : "sumali sa #%1$@ channel sa Meshline: bitchat://geohash/%1$@ — bago sa Meshline? kunin ito sa %2$@ tapos i-type ang #%1$@ sa mga channel ng lokasyon."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "rejoins le canal #%1$@ sur Meshline : Meshline://geohash/%1$@ — nouveau sur Meshline ? télécharge-le sur %2$@ puis saisis #%1$@ dans les canaux localisation."
+            "value" : "rejoins le canal #%1$@ sur Meshline : bitchat://geohash/%1$@ — nouveau sur Meshline ? télécharge-le sur %2$@ puis saisis #%1$@ dans les canaux localisation."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "הצטרף לערוץ #%1$@ ב-Meshline: Meshline://geohash/%1$@ — חדש ב-Meshline? הורד מ-%2$@ ואז הקלד #%1$@ תחת ערוצי מיקום."
+            "value" : "הצטרף לערוץ #%1$@ ב-Meshline: bitchat://geohash/%1$@ — חדש ב-Meshline? הורד מ-%2$@ ואז הקלד #%1$@ תחת ערוצי מיקום."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Meshline पर #%1$@ चैनल से जुड़ें: Meshline://geohash/%1$@ — Meshline नए हैं? %2$@ से पाएँ, फिर लोकेशन चैनल में #%1$@ टाइप करें।"
+            "value" : "Meshline पर #%1$@ चैनल से जुड़ें: bitchat://geohash/%1$@ — Meshline नए हैं? %2$@ से पाएँ, फिर लोकेशन चैनल में #%1$@ टाइप करें।"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "gabung ke kanal #%1$@ di Meshline: Meshline://geohash/%1$@ — baru di Meshline? unduh di %2$@ lalu ketik #%1$@ di kanal lokasi."
+            "value" : "gabung ke kanal #%1$@ di Meshline: bitchat://geohash/%1$@ — baru di Meshline? unduh di %2$@ lalu ketik #%1$@ di kanal lokasi."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "entra nel canale #%1$@ su Meshline: Meshline://geohash/%1$@ — nuovo su Meshline? scaricalo da %2$@ e poi digita #%1$@ nei canali posizione."
+            "value" : "entra nel canale #%1$@ su Meshline: bitchat://geohash/%1$@ — nuovo su Meshline? scaricalo da %2$@ e poi digita #%1$@ nei canali posizione."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Meshlineの#%1$@チャンネルに参加: Meshline://geohash/%1$@ — はじめてですか？ %2$@ から入手し、ロケーションチャンネルで #%1$@ と入力してください。"
+            "value" : "Meshlineの#%1$@チャンネルに参加: bitchat://geohash/%1$@ — はじめてですか？ %2$@ から入手し、ロケーションチャンネルで #%1$@ と入力してください。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Meshline의 #%1$@ 채널에 참여하세요: Meshline://geohash/%1$@ — Meshline이 처음이신가요? %2$@에서 받은 뒤 위치 채널에서 #%1$@을(를) 입력하세요."
+            "value" : "Meshline의 #%1$@ 채널에 참여하세요: bitchat://geohash/%1$@ — Meshline이 처음이신가요? %2$@에서 받은 뒤 위치 채널에서 #%1$@을(를) 입력하세요."
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "sertai saluran #%1$@ di Meshline: Meshline://geohash/%1$@ — baharu di Meshline? dapatkannya di %2$@ kemudian taip #%1$@ di bawah kanal lokasi."
+            "value" : "sertai saluran #%1$@ di Meshline: bitchat://geohash/%1$@ — baharu di Meshline? dapatkannya di %2$@ kemudian taip #%1$@ di bawah kanal lokasi."
           }
         },
         "ne" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Meshline मा #%1$@ च्यानलमा सामेल हुनुहोस्: Meshline://geohash/%1$@ — Meshline मा नयाँ? %2$@ बाट लिनुहोस्, त्यसपछि स्थान च्यानलमा #%1$@ टाइप गर्नुहोस्।"
+            "value" : "Meshline मा #%1$@ च्यानलमा सामेल हुनुहोस्: bitchat://geohash/%1$@ — Meshline मा नयाँ? %2$@ बाट लिनुहोस्, त्यसपछि स्थान च्यानलमा #%1$@ टाइप गर्नुहोस्।"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "doe mee met het #%1$@-kanaal op Meshline: Meshline://geohash/%1$@ — nieuw bij Meshline? haal het op %2$@ en typ daarna #%1$@ onder locatiekanalen."
+            "value" : "doe mee met het #%1$@-kanaal op Meshline: bitchat://geohash/%1$@ — nieuw bij Meshline? haal het op %2$@ en typ daarna #%1$@ onder locatiekanalen."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "dołącz do kanału #%1$@ w Meshline: Meshline://geohash/%1$@ — nowość w Meshline? pobierz z %2$@, a potem wpisz #%1$@ w kanałach lokalizacji."
+            "value" : "dołącz do kanału #%1$@ w Meshline: bitchat://geohash/%1$@ — nowość w Meshline? pobierz z %2$@, a potem wpisz #%1$@ w kanałach lokalizacji."
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "junta-te ao canal #%1$@ no Meshline: Meshline://geohash/%1$@ — novo no Meshline? obtém-no em %2$@ e depois escreve #%1$@ em canais de localização."
+            "value" : "junta-te ao canal #%1$@ no Meshline: bitchat://geohash/%1$@ — novo no Meshline? obtém-no em %2$@ e depois escreve #%1$@ em canais de localização."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "entre no canal #%1$@ no Meshline: Meshline://geohash/%1$@ — novo no Meshline? baixe em %2$@ e depois digite #%1$@ em canais de localização."
+            "value" : "entre no canal #%1$@ no Meshline: bitchat://geohash/%1$@ — novo no Meshline? baixe em %2$@ e depois digite #%1$@ em canais de localização."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "присоединяйся к каналу #%1$@ в Meshline: Meshline://geohash/%1$@ — впервые в Meshline? скачай на %2$@, затем введи #%1$@ в каналах локации."
+            "value" : "присоединяйся к каналу #%1$@ в Meshline: bitchat://geohash/%1$@ — впервые в Meshline? скачай на %2$@, затем введи #%1$@ в каналах локации."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "gå med i #%1$@-kanalen på Meshline: Meshline://geohash/%1$@ — ny på Meshline? hämta den på %2$@ och skriv sedan #%1$@ under platskanaler."
+            "value" : "gå med i #%1$@-kanalen på Meshline: bitchat://geohash/%1$@ — ny på Meshline? hämta den på %2$@ och skriv sedan #%1$@ under platskanaler."
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Meshline-இல் #%1$@ சேனலில் சேரவும்: Meshline://geohash/%1$@ — Meshline புதியவரா? %2$@ இல் பெற்று, பின்னர் இட சேனல்களில் #%1$@ என தட்டச்சு செய்யவும்."
+            "value" : "Meshline-இல் #%1$@ சேனலில் சேரவும்: bitchat://geohash/%1$@ — Meshline புதியவரா? %2$@ இல் பெற்று, பின்னர் இட சேனல்களில் #%1$@ என தட்டச்சு செய்யவும்."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "เข้าร่วมช่อง #%1$@ บน Meshline: Meshline://geohash/%1$@ — ใหม่กับ Meshline? ดาวน์โหลดที่ %2$@ แล้วพิมพ์ #%1$@ ในช่องตามตำแหน่ง"
+            "value" : "เข้าร่วมช่อง #%1$@ บน Meshline: bitchat://geohash/%1$@ — ใหม่กับ Meshline? ดาวน์โหลดที่ %2$@ แล้วพิมพ์ #%1$@ ในช่องตามตำแหน่ง"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Meshline'te #%1$@ kanalına katıl: Meshline://geohash/%1$@ — Meshline'te yeni misin? %2$@ adresinden indir, sonra konum kanallarında #%1$@ yaz."
+            "value" : "Meshline'te #%1$@ kanalına katıl: bitchat://geohash/%1$@ — Meshline'te yeni misin? %2$@ adresinden indir, sonra konum kanallarında #%1$@ yaz."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "приєднуйся до каналу #%1$@ у Meshline: Meshline://geohash/%1$@ — вперше в Meshline? завантаж на %2$@, потім введи #%1$@ у каналах локації."
+            "value" : "приєднуйся до каналу #%1$@ у Meshline: bitchat://geohash/%1$@ — вперше в Meshline? завантаж на %2$@, потім введи #%1$@ у каналах локації."
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Meshline پر #%1$@ چینل میں شامل ہوں: Meshline://geohash/%1$@ — Meshline نئے ہیں؟ %2$@ سے حاصل کریں، پھر لوکیشن چینلز میں #%1$@ ٹائپ کریں۔"
+            "value" : "Meshline پر #%1$@ چینل میں شامل ہوں: bitchat://geohash/%1$@ — Meshline نئے ہیں؟ %2$@ سے حاصل کریں، پھر لوکیشن چینلز میں #%1$@ ٹائپ کریں۔"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "tham gia kênh #%1$@ trên Meshline: Meshline://geohash/%1$@ — mới dùng Meshline? tải tại %2$@ rồi nhập #%1$@ trong kênh vị trí."
+            "value" : "tham gia kênh #%1$@ trên Meshline: bitchat://geohash/%1$@ — mới dùng Meshline? tải tại %2$@ rồi nhập #%1$@ trong kênh vị trí."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "加入 Meshline 上的 #%1$@ 频道：Meshline://geohash/%1$@ — 初次使用 Meshline？前往 %2$@ 获取，然后在位置频道中输入 #%1$@。"
+            "value" : "加入 Meshline 上的 #%1$@ 频道：bitchat://geohash/%1$@ — 初次使用 Meshline？前往 %2$@ 获取，然后在位置频道中输入 #%1$@。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "加入 Meshline 上的 #%1$@ 頻道：Meshline://geohash/%1$@ — 初次使用 Meshline？前往 %2$@ 取得，然後在位置頻道中輸入 #%1$@。"
+            "value" : "加入 Meshline 上的 #%1$@ 頻道：bitchat://geohash/%1$@ — 初次使用 Meshline？前往 %2$@ 取得，然後在位置頻道中輸入 #%1$@。"
           }
         }
       }
