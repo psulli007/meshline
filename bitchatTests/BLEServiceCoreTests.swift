@@ -141,7 +141,7 @@ struct BLEServiceCoreTests {
             timestamp: UInt64(Date().timeIntervalSince1970 * 1000),
             payload: payload,
             signature: nil,
-            ttl: 7
+            ttl: TransportConfig.messageTTLDefault
         )
         let signed = try #require(signer.signPacket(packet), "Failed to sign announce packet")
 
@@ -268,7 +268,7 @@ struct BLEServiceCoreTests {
             timestamp: UInt64(Date().timeIntervalSince1970 * 1000),
             payload: Data(),
             signature: nil,
-            ttl: 7
+            ttl: TransportConfig.messageTTLDefault
         )
 
         #expect(ble._test_acceptsIngress(packet: packet, boundPeerID: boundPeer))
@@ -320,7 +320,7 @@ struct BLEServiceCoreTests {
             timestamp: UInt64(Date().timeIntervalSince1970 * 1000),
             payload: payload,
             signature: nil,
-            ttl: 7
+            ttl: TransportConfig.messageTTLDefault
         )
         let packet = try #require(signer.signPacket(unsigned), "Failed to sign announce packet")
 
@@ -418,7 +418,7 @@ struct BLEServiceCoreTests {
             timestamp: UInt64(Date().timeIntervalSince1970 * 1000),
             payload: payload,
             signature: nil,
-            ttl: 7
+            ttl: TransportConfig.messageTTLDefault
         )
         let packet = try #require(victimSigner.signPacket(unsigned), "Failed to sign announce packet")
 
@@ -482,7 +482,7 @@ struct BLEServiceCoreTests {
             timestamp: UInt64(Date().timeIntervalSince1970 * 1000),
             payload: payload,
             signature: nil,
-            ttl: 7
+            ttl: TransportConfig.messageTTLDefault
         )
         let packet = try #require(victimSigner.signPacket(unsigned), "Failed to sign announce packet")
 
@@ -550,7 +550,7 @@ struct BLEServiceCoreTests {
             timestamp: UInt64(Date().timeIntervalSince1970 * 1000),
             payload: payload,
             signature: nil,
-            ttl: 7
+            ttl: TransportConfig.messageTTLDefault
         )
         let replay = try #require(victim.signPacket(unsigned), "Failed to sign replayed announce")
         #expect(ble._test_recordIngressIfNew(packet: replay, linkID: attackerLink))
@@ -726,7 +726,7 @@ struct BLEServiceCoreTests {
             timestamp: UInt64(Date().timeIntervalSince1970 * 1_000),
             payload: forgedMessage1,
             signature: nil,
-            ttl: 7
+            ttl: TransportConfig.messageTTLDefault
         )
         ble._test_handlePacket(firstPacket, fromPeerID: alicePeerID)
 
@@ -792,7 +792,7 @@ struct BLEServiceCoreTests {
             timestamp: UInt64(Date().timeIntervalSince1970 * 1_000) + 1,
             payload: forgedEarlyCiphertext,
             signature: nil,
-            ttl: 7
+            ttl: TransportConfig.messageTTLDefault
         )
         ble._test_handlePacket(earlyPacket, fromPeerID: alicePeerID)
         await ble._test_drainNoiseMessagePipeline()
@@ -804,7 +804,7 @@ struct BLEServiceCoreTests {
             timestamp: UInt64(Date().timeIntervalSince1970 * 1_000) + 2,
             payload: forgedMessage3,
             signature: nil,
-            ttl: 7
+            ttl: TransportConfig.messageTTLDefault
         )
         ble._test_handlePacket(thirdPacket, fromPeerID: alicePeerID)
 
@@ -926,7 +926,7 @@ struct BLEServiceCoreTests {
             timestamp: UInt64(Date().timeIntervalSince1970 * 1_000),
             payload: reconnectMessage1,
             signature: nil,
-            ttl: 7
+            ttl: TransportConfig.messageTTLDefault
         )
         ble._test_handlePacket(reconnectPacket, fromPeerID: alicePeerID)
         // The responder's message 2 is a monotonic quarantine signal; the
@@ -1007,7 +1007,7 @@ struct BLEServiceCoreTests {
             timestamp: UInt64(Date().timeIntervalSince1970 * 1_000) + 1,
             payload: retryMessage2,
             signature: nil,
-            ttl: 7
+            ttl: TransportConfig.messageTTLDefault
         )
         ble._test_handlePacket(retryPacket, fromPeerID: alicePeerID)
         let drained = await TestHelpers.waitUntil(
@@ -1082,7 +1082,7 @@ struct BLEServiceCoreTests {
             timestamp: UInt64(Date().timeIntervalSince1970 * 1000),
             payload: payload,
             signature: nil,
-            ttl: 7
+            ttl: TransportConfig.messageTTLDefault
         )
         let packet = try #require(signer.signPacket(unsigned), "Failed to sign announce packet")
 
@@ -1382,7 +1382,7 @@ struct BLEServiceCoreTests {
                 timestamp: UInt64(Date().timeIntervalSince1970 * 1000),
                 payload: payload.encode(),
                 signature: nil,
-                ttl: 7
+                ttl: TransportConfig.messageTTLDefault
             )
             ble._test_handlePacket(packet, fromPeerID: link, preseedPeer: false)
         }

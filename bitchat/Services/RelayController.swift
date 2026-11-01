@@ -77,9 +77,9 @@ struct RelayController {
                 return max(UInt8(2), min(ttlCap, UInt8(5)))
             }
             if degree <= 2 {
-                // Meshline: thin chains relay up to 8 hops (bridges long gaps
+                // Meshline: thin chains cap at 9 so relayed TTLs never equal 7 or 10 (the direct announce TTLs of bitchat and Meshline) (bridges long gaps
                 // while capping flood/battery cost; crowd limit above unchanged).
-                return min(ttlCap, UInt8(8))
+                return min(ttlCap, UInt8(9))
             }
             let preferred = UInt8((isAnnounce || isUrgentBoardPost) ? 7 : 6)
             return max(UInt8(2), min(ttlCap, preferred))

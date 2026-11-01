@@ -268,7 +268,7 @@ struct RelayControllerTests {
         )
 
         #expect(decision.shouldRelay)
-        #expect(decision.newTTL == 7) // sparse cap 8, minus one hop
+        #expect(decision.newTTL == 8) // sparse cap 9, minus one hop
     }
 
     @Test

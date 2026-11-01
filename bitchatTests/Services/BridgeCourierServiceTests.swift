@@ -729,7 +729,7 @@ struct BridgeCourierServiceTests {
         fixture.service.refresh()
 
         let tags = try #require(fixture.openedSubscriptions.last)
-        #expect(tags.count == 6) // 3 own + 3 watched
+        #expect(tags.count == 2 * (Int(CourierEnvelope.candidateDaysBack) + 2)) // own + watched, each covering the 72h window
     }
 
     @Test func refreshClosesSubscriptionWhenBridgeOff() {
@@ -765,7 +765,7 @@ struct BridgeCourierServiceTests {
         trailing.fire()
 
         #expect(fixture.openedSubscriptions.count == 2)
-        #expect(fixture.openedSubscriptions.last?.count == 6)
+        #expect(fixture.openedSubscriptions.last?.count == 2 * (Int(CourierEnvelope.candidateDaysBack) + 2))
     }
 
     // MARK: - Inbound drops

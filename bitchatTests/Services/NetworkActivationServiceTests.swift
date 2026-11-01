@@ -203,6 +203,8 @@ final class NetworkActivationServiceTests: XCTestCase {
         let suiteName = "NetworkActivationServiceTests-\(UUID().uuidString)"
         let storage = UserDefaults(suiteName: suiteName)!
         storage.removePersistentDomain(forName: suiteName)
+        // Meshline is offline-first; these tests cover behavior after the user opts in.
+        storage.set(true, forKey: NetworkActivationService.internetOptInKey)
 
         let permissionSubject = CurrentValueSubject<LocationChannelManager.PermissionState, Never>(permission)
         let favoritesSubject = CurrentValueSubject<Set<Data>, Never>(favorites)

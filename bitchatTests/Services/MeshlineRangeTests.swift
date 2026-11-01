@@ -36,7 +36,7 @@ struct MeshlineRangeTests {
     @Test func thinChainRelaysAndDecrements() {
         let d = decide(ttl: 10, degree: 1)
         #expect(d.shouldRelay)
-        #expect(d.newTTL == 7)
+        #expect(d.newTTL == 8)
         let mid = decide(ttl: 5, degree: 2)
         #expect(mid.shouldRelay)
         #expect(mid.newTTL == 4)
