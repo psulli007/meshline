@@ -108,3 +108,37 @@ struct MeshlineSplashView: View {
     }
 }
 
+
+#if os(iOS)
+import UIKit
+
+/// Hosts the splash in its own pass-through window above the app, so the
+/// first-launch onboarding sheet can present underneath without waiting and
+/// the splash stays visible on top until it fades.
+@MainActor
+enum MeshlineSplashWindow {
+    private static var window: UIWindow?
+
+    static func present() {
+        guard window == nil,
+              let scene = UIApplication.shared.connectedScenes
+                .compactMap({ $0 as? UIWindowScene })
+                .first(where: { $0.activationState != .unattached }) ?? UIApplication.shared.connectedScenes.first as? UIWindowScene
+        else { return }
+        let w = UIWindow(windowScene: scene)
+        w.windowLevel = .alert + 1
+        w.backgroundColor = .clear
+        w.isUserInteractionEnabled = false
+        let host = UIHostingController(rootView: MeshlineSplashView { dismiss() })
+        host.view.backgroundColor = .clear
+        w.rootViewController = host
+        w.isHidden = false
+        window = w
+    }
+
+    static func dismiss() {
+        window?.isHidden = true
+        window = nil
+    }
+}
+#endif

@@ -33,14 +33,13 @@ struct BitchatApp: App {
         WindowGroup {
             Group {
                 #if os(iOS)
-                ZStack {
-                    MeshlineHomeView()
-                    if showSplash {
-                        MeshlineSplashView { showSplash = false }
-                            .transition(.opacity)
-                            .zIndex(1)
+                MeshlineHomeView()
+                    .onAppear {
+                        if showSplash {
+                            showSplash = false
+                            MeshlineSplashWindow.present()
+                        }
                     }
-                }
                 #else
                 ContentView()
                 #endif
